@@ -1,1 +1,8 @@
-<h1>signed in yo!</h1>
+<h1>Welcome <%=current_user.name %></h1>
+
+<ul>
+  <li>Occupation: <%= current_user.occupation %></li>
+  <li>School: <%= current_user.school %></li>
+  <li>Grade: <%= current_user.grade %></li>
+  <li>Location: <%= current_user.location %></li>
+</ul>
