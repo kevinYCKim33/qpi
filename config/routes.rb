@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'welcome#index'
+  root 'welcome#home'
   get 'css/normalize.css', to: 'css#normalize'
   get 'css/webflow.css', to: 'css#webflow'
   get 'css/qpi.css', to: 'css#qpi'
