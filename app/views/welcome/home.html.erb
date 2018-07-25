@@ -38,7 +38,7 @@
     </div>
   </div>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navigation-bar w-nav">
-    <div class="w-container"><a href="index.html" class="brand-link w-nav-brand"><img src="<%=asset_path('Logo-Circle_2018-0706.png')%>" width="60" class="logo"></a> <nav role="navigation" class="navigation-menu w-nav-menu"><a href="workshops.html" class="navigation-link w-nav-link">Workshops</a><a href="impact.html" class="navigation-link w-nav-link">Our Impact</a><a href="about.html" class="navigation-link w-nav-link">About</a><a href="contact.html" class="navigation-link w-nav-link">Contact</a><a href="workshops.html" data-w-id="74cd9764-32b4-197e-ddfb-e4f70e8aeb7a" class="button w-button">ATTEND A WORKSHOP</a></nav>
+    <div class="w-container"><a href="index.html" class="brand-link w-nav-brand"><img src="<%=asset_path('Logo-Circle_2018-0706.png')%>" width="60" class="logo"></a> <nav role="navigation" class="navigation-menu w-nav-menu"><%= link_to("Sign Out", destroy_user_session_path, :method => 'delete', class:"navigation-link w-nav-link") %><%= link_to("Sign In", new_user_session_path, class:"navigation-link w-nav-link") %><a href="about.html" class="navigation-link w-nav-link">About</a><a href="contact.html" class="navigation-link w-nav-link">Contact</a><a href="workshops.html" data-w-id="74cd9764-32b4-197e-ddfb-e4f70e8aeb7a" class="button w-button">ATTEND A WORKSHOP</a></nav>
       <div class="hamburger-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
