@@ -5,6 +5,10 @@ class WelcomeController < ApplicationController
     redirect_to personal_home_path if user_signed_in?
   end
 
+  def beta_home
+
+  end
+
   def logged_in_home
     # binding.pry
     if !user_signed_in?
