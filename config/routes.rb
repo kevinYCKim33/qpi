@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
 
-  get '/home', to: 'welcome#logged_in_home', as: 'personal_home'
+  get '/home', to: 'users#home', as: 'personal_home'
   get 'css/normalize.css', to: 'css#normalize'
   get 'css/webflow.css', to: 'css#webflow'
   get 'css/qpi.css', to: 'css#qpi'

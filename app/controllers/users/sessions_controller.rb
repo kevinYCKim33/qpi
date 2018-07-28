@@ -6,7 +6,7 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     # @title = 'Log in'
-    # render :layout => 'landing'
+    # render :layout => '/landing'
     super
   end
 
