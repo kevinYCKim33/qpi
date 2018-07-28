@@ -12,5 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( normalize.css webflow.css qpi.css )
-# Rails.application.config.assets.precompile += %w(webflow.js)
+
+## ALTERNATIVE TO PUTTING CSS ALL IN THE MANIFEST (WHICH IS THE PREFERRED METHOD)
+# Rails.application.config.assets.precompile += %w( normalize.css webflow.css qpi.css )
