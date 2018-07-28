@@ -8,10 +8,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'landing#contact', as: 'contact'
 
   get '/home', to: 'users#home', as: 'personal_home'
-  get 'css/normalize.css', to: 'css#normalize'
-  get 'css/webflow.css', to: 'css#webflow'
-  get 'css/qpi.css', to: 'css#qpi'
-  get 'js/webflow.js', to: 'js#webflow'
+
   get 'images/Manzanita.jpeg', to:'images#Manzanita'
   get 'images/handshake_unsplash.jpg', to:'images#handshake_unsplash'
   resources :users
