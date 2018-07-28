@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Qpi</title>
+    <title> <%= @title %> </title>
     <%= csrf_meta_tags %>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= render 'components/nav' %>
     <%= yield %>
+    <%= render 'components/footer' %>
   </body>
 </html>

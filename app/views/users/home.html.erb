@@ -1,0 +1,12 @@
+<h1><%=current_user.name %></h1>
+
+<ul>
+  <li>Occupation: <%= current_user.occupation %></li>
+  <li>School: <%= current_user.school %></li>
+  <li>Grade: <%= current_user.grade %></li>
+  <li>Location: <%= current_user.location %></li>
+</ul>
+
+<div>
+  <%= link_to("Edit Profile", edit_user_path(current_user)) %> <br />
+</div>

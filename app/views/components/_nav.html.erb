@@ -1,0 +1,20 @@
+<% if user_signed_in? %>
+  <ul>
+    <li><%= link_to("Attend Workshop", '/workshops') %> </li>
+    <li><%= link_to("Explore Communities", '/communities') %> </li>
+    <li><%= link_to("About", about_path) %> </li>
+    <li><%= link_to("Contact", contact_path) %> </li>
+    <li><%= link_to("My Profile", personal_home_path) %> </li>
+    <li><%= link_to("Settings", '/settings') %> </li>
+    <li> <%= link_to("Log Out", destroy_user_session_path, :method => 'delete') %></li>
+  </ul>
+<% else %>
+  <ul>
+    <li><%= link_to("Workshops", '/workshops') %> </li>
+    <li><%= link_to("Communities", '/communities') %> </li>
+    <li><%= link_to("About", about_path) %> </li>
+    <li><%= link_to("Contact", contact_path) %> </li>
+    <li><%= link_to("Sign In", new_user_session_path) %> </li>
+    <li><%= link_to("Sign Up", new_user_registration_path) %></li>
+  </ul>
+<% end %>

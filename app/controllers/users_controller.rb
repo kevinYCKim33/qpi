@@ -1,10 +1,16 @@
 class UsersController < ApplicationController
 
+  def home
+    @title = 'Home'
+    redirect_to root_path if !user_signed_in?
+  end
+
   def edit
     # binding.pry
     if current_user.id != params[:id].to_i
       redirect_back(fallback_location: root_path)
     end
+    @title = 'Edit Profile'
     @user = current_user
   end
 
