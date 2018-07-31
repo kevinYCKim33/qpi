@@ -10,13 +10,12 @@
     <div class="container w-container">
       <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
       <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/profile" redirect="/profile" class="sign-up"><input type="text" class="text-field center w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Full Name" id="Full-Name" required=""><input type="text" class="text-field center w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" id="Email-2" required=""><input type="password" class="text-field center w-input" maxlength="256" name="Password" data-name="Password" placeholder="Password" id="Password" required=""><input type="submit" value="SIGN UP" data-wait="Please wait..." class="button_blue _75width center w-button"></form>
-        <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form.</div>
-        </div>
+        <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/profile" redirect="/profile" class="sign-up">
+          <input type="text" class="text-field center w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Full Name" id="Full-Name" required="">
+          <input type="text" class="text-field center w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" id="Email-2" required="">
+          <input type="password" class="text-field center w-input" maxlength="256" name="Password" data-name="Password" placeholder="Password" id="Password" required="">
+          <input type="submit" value="SIGN UP" data-wait="Please wait..." class="button_blue _75width center w-button">
+        </form>
       </div>
     </div>
   </div>
@@ -24,3 +23,15 @@
   <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: "email-form"}) do |f| %>
+    <%= devise_error_messages! %>
+
+    <%= f.text_field :name, autofocus: true, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Full Name' %>
+
+    <%= f.email_field :email, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Email' %>
+
+    <%= f.password_field :password, class: "text-field center w-input", maxlength: 256, placeholder: 'Password',  autocomplete: "off" %>
+
+    <%= f.submit "SIGN UP", class:'button_blue _75width center w-button' %>
+  <% end %>
