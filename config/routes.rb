@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/home', to: 'users#home', as: 'personal_home'
 
   get 'images/KidandCar.png', to: 'images#KidandCar'
-  get 'images/Manzanita.jpeg', to:'images#Manzanita'
-  get 'images/handshake_unsplash.jpg', to:'images#handshake_unsplash'
+  # get 'images/Manzanita.jpeg', to:'images#Manzanita'
+  # get 'images/handshake_unsplash.jpg', to:'images#handshake_unsplash'
   resources :users
 end
