@@ -1,7 +1,7 @@
 class LandingController < ApplicationController
 
   def home
-    render :layout => false
+    # render :layout => false
     # @title = 'QPi Education | STEM Professional Development'
     redirect_to personal_home_path if user_signed_in?
   end
