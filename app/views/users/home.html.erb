@@ -24,8 +24,9 @@
       <a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a>
       <a href="/explore-communities" class="nav-link w-nav-link">EXPLORE <br>COMMUNITIES</a>
       <a href="/favorites" class="nav-link w-nav-link">FAVORITES</a>
-      <a href="/profile" class="nav-link w-nav-link w--current" style="color:#47cda4">PROFILE</a>
-      <a href="/logout" class="nav-link w-nav-link">LOG OUT</a>
+      <%= link_to("PROFILE", personal_home_path, class: "nav-link w-nav-link w--current") %>
+      <%= link_to("LOG OUT", destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
+
     </nav>
     <div class="hamburger-button-2 w-nav-button">
       <div class="w-icon-nav-menu"></div>
