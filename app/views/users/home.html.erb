@@ -42,7 +42,7 @@
     </div>
     <a href="/workshops-loggedin" class="button_workshop_leftnav w-button">Attend a Workshop</a></div>
   <div class="content-wrapper">
-    <h1 class="name_heading">Jennifer Little</h1>
+    <h1 class="name_heading"><%= current_user.name %></h1>
     <div>
       <div class="block_top50px">
         <div class="w-row">
@@ -54,7 +54,7 @@
                   <h3 class="profile_heading">Location</h3>
                 </div>
                 <div class="w-col w-col-7">
-                  <div class="profile_text">Denver, CO</div>
+                  <div class="profile_text"><%= current_user.location %></div>
                 </div>
               </div>
               <div class="basic-info w-row">
@@ -62,15 +62,15 @@
                   <h3 class="profile_heading">OCcupation</h3>
                 </div>
                 <div class="w-col w-col-7">
-                  <div class="profile_text">Math Teacher</div>
+                  <div class="profile_text"><%= current_user.occupation %></div>
                 </div>
               </div>
               <div class="basic-info w-row">
                 <div class="w-col w-col-5">
-                  <h3 class="profile_heading">OCcupation</h3>
+                  <h3 class="profile_heading">Grade</h3>
                 </div>
                 <div class="w-col w-col-7">
-                  <div class="profile_text">10th Grade</div>
+                  <div class="profile_text"><%= current_user.grade %></div>
                 </div>
               </div>
               <div class="basic-info w-row">
@@ -78,11 +78,11 @@
                   <h3 class="profile_heading">SCHOOL</h3>
                 </div>
                 <div class="w-col w-col-7">
-                  <div class="profile_text">ABC High School</div>
+                  <div class="profile_text"><%= current_user.school %></div>
                 </div>
               </div>
             </div>
-            <div><a href="#" class="hollow_button_blue center w-button">Edit Profile</a></div>
+            <div><%= link_to("Edit Profile", edit_user_path(current_user), class: "hollow_button_blue center w-button") %></div>
           </div>
         </div>
       </div>
