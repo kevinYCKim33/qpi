@@ -1,27 +1,27 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: ''%>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div data-collapse="small" data-animation="default" data-duration="400" class="navigation-bar w-nav">
+    <div class="w-container">
+      <nav role="navigation" class="navigation-menu w-clearfix w-nav-menu"><img src="<%=asset_path('Logo_CircleOnly.svg')%>" width="46" class="brand-link"><a href="/contact" class="navigation-link w-nav-link">Workshops</a><a href="/contact" class="navigation-link w-nav-link">About</a><a href="/contact" class="navigation-link w-nav-link">Contact</a><a href="/register" class="button_blue w-button">SIGN UP FREE</a><a href="/login" class="hollow_button_blue w-button w--current">Log IN</a></nav>
+      <div class="hamburger-button w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
 
-<%= render "users/shared/links" %>
+  <div class="section">
+    <div class="container w-container">
+      <h2 class="section-heading">LOG INTO YOUR ACCOUT</h2>
+      <div class="form-block w-form">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <%= f.email_field :email, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Email' %>
+
+          <%= f.password_field :password, class: "text-field center w-input", maxlength: 256, placeholder: 'Password',  autocomplete: "off" %>
+
+          <%= f.submit "LOG IN", class:'button_blue _75width center w-button' %>
+        <% end %>
+      </div>
+      <div class="text_agreement center">Already have an account? <a target="_blank" href="/sign-up">Sign Up</a>.</div>
+    </div>
+  </div>
+  <a href="/my-communities">Logged In State</a>

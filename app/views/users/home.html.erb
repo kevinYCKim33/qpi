@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Jul 31 2018 08:46:13 GMT+0000 (UTC)  -->
-<html data-wf-page="5b5dd320b008d1b6b7e7ac09" data-wf-site="5b5dd320b008d147d2e7ac04">
+ <html data-wf-page="5b5e6da8c3f7cb207c48c27e" data-wf-site="5b5dd320b008d147d2e7ac04" class="w-mod-js wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-opensans-n3-active wf-opensans-i3-active wf-opensans-n4-active wf-opensans-i4-active wf-opensans-n6-active wf-opensans-i6-active wf-opensans-n7-active wf-opensans-i7-active wf-opensans-n8-active wf-opensans-i8-active wf-montserrat-n1-active wf-montserrat-i1-active wf-montserrat-n2-active wf-montserrat-i2-active wf-montserrat-n3-active wf-montserrat-i3-active wf-montserrat-n4-active wf-montserrat-i4-active wf-montserrat-n5-active wf-montserrat-i5-active wf-montserrat-n6-active wf-montserrat-i6-active wf-montserrat-n7-active wf-montserrat-i7-active wf-montserrat-n8-active wf-montserrat-i8-active wf-montserrat-n9-active wf-montserrat-i9-active wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-active">
 <head>
   <title> QPi Beta </title>
   <%= csrf_meta_tags %>
@@ -19,41 +19,76 @@
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="body">
-  <%#=binding.pry %>
-  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav">
-    <div class="w-container">
-      <div class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-      <nav role="navigation" class="navigation-menu w-clearfix w-nav-menu"><a href="signup.html" class="button_green w-button">ATTEND WORKSHOP</a><a href="contact.html" class="green-link w-nav-link">EXPLORE COMMUNITIES</a>
-        <div data-delay="0" class="dropdown w-dropdown">
-          <div class="w-clearfix w-dropdown-toggle">
-            <div class="dropdown w-icon-dropdown-toggle"></div>
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
+    <nav role="navigation" class="nav-menu-2 w-nav-menu">
+      <a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a>
+      <a href="/explore-communities" class="nav-link w-nav-link">EXPLORE <br>COMMUNITIES</a>
+      <a href="/favorites" class="nav-link w-nav-link">FAVORITES</a>
+      <a href="/profile" class="nav-link w-nav-link w--current" style="color:#47cda4">PROFILE</a>
+      <a href="/logout" class="nav-link w-nav-link">LOG OUT</a>
+    </nav>
+    <div class="hamburger-button-2 w-nav-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+    <div class="social-footer w-hidden-medium w-hidden-small w-hidden-tiny">
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+      <a href="#" class="social-icon-link w-inline-block"></a>
+    </div>
+    <a href="/workshops-loggedin" class="button_workshop_leftnav w-button">Attend a Workshop</a></div>
+  <div class="content-wrapper">
+    <h1 class="name_heading">Jennifer Little</h1>
+    <div>
+      <div class="block_top50px">
+        <div class="w-row">
+          <div class="w-col w-col-4"><img src="<%=asset_path('Profile-Default.svg')%>" width="184" class="image-8"></div>
+          <div class="w-col w-col-8">
+            <div class="profile_block">
+              <div class="basic-info w-row">
+                <div class="w-col w-col-5">
+                  <h3 class="profile_heading">Location</h3>
+                </div>
+                <div class="w-col w-col-7">
+                  <div class="profile_text">Denver, CO</div>
+                </div>
+              </div>
+              <div class="basic-info w-row">
+                <div class="w-col w-col-5">
+                  <h3 class="profile_heading">OCcupation</h3>
+                </div>
+                <div class="w-col w-col-7">
+                  <div class="profile_text">Math Teacher</div>
+                </div>
+              </div>
+              <div class="basic-info w-row">
+                <div class="w-col w-col-5">
+                  <h3 class="profile_heading">OCcupation</h3>
+                </div>
+                <div class="w-col w-col-7">
+                  <div class="profile_text">10th Grade</div>
+                </div>
+              </div>
+              <div class="basic-info w-row">
+                <div class="w-col w-col-5">
+                  <h3 class="profile_heading">SCHOOL</h3>
+                </div>
+                <div class="w-col w-col-7">
+                  <div class="profile_text">ABC High School</div>
+                </div>
+              </div>
+            </div>
+            <div><a href="#" class="hollow_button_blue center w-button">Edit Profile</a></div>
           </div>
-          <nav class="dropdown-list w-dropdown-list"><%= link_to("Log Out", destroy_user_session_path, :method => 'delete', class: "dropdown-link w-dropdown-link") %>
-<a href="#" class="w-dropdown-link">Link 2</a><a href="#" class="w-dropdown-link">Link 3</a></nav>
-</div><img src="<%=asset_path('Profile-Default.svg')%>" class="profile-image"></nav>
-    </div>
-  </div>
-  <div class="section_gradient">
-    <div class="w-container">
-      <h2 class="section-heading centered white"><%=current_user.name %></h2>
-      <div class="row w-row">
-        <div class="w-col w-col-3"><%= current_user.occupation %></div>
-        <div class="w-col w-col-3"><%= current_user.school %></div>
-        <div class="w-col w-col-3"><%= current_user.grade %></div>
-        <div class="w-col w-col-3"><%= current_user.location %></div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div>
-    <%= link_to("Edit Profile", edit_user_path(current_user)) %> <br />
-    <%#= render 'components/nav' %>
-  </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    binding.pry
+    # binding.pry
     if current_user.id != params[:id].to_i
       redirect_back(fallback_location: personal_home_path)
     end
