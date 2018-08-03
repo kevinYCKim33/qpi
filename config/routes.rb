@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}, controllers: { sessions: "users/sessions", registrations: "users/registrations", passwords: "users/passwords" }
-
+  devise_scope :user do
+    get 'password_reset', to: 'users/passwords#new', as: 'password_reset'
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'landing#home'
   get '/beta_home', to: 'landing#beta_home', as: 'beta_home'

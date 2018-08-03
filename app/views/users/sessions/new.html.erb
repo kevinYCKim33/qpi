@@ -9,6 +9,9 @@
 
   <div class="section">
     <div class="container w-container">
+      <% if flash[:message] %>
+        <div class="text-block-1", style="color:green;"><%= flash[:message] %></div>
+      <% end %>
       <h2 class="section-heading">LOG INTO YOUR ACCOUT</h2>
       <div class="form-block w-form">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -17,11 +20,10 @@
           <%= f.email_field :email, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Email' %>
 
           <%= f.password_field :password, class: "text-field center w-input", maxlength: 256, placeholder: 'Password',  autocomplete: "off" %>
-          <div class="text-block-3"><a href="#">Forgot your password?</a></div>
+          <div class="text-block-3"><%= link_to "Forgot your password?", password_reset_path %></div>
           <%= f.submit "LOG IN", class:'button_blue _75width center w-button' %>
         <% end %>
       </div>
       <div class="text_agreement center">Already have an account? <a target="_blank" href="/register">Sign Up</a>.</div>
     </div>
   </div>
-  <a href="/my-communities">Logged In State</a>
