@@ -1,0 +1,5 @@
+<% if current_user.member?(community) %>
+  <%= link_to 'VIEW COMMUNITY', community, class: "hollow_button_green full_width w-button" %>
+<% else %>
+  <%= link_to 'JOIN COMMUNITY', community, class: "button_green full_width w-button" %>
+<% end %>

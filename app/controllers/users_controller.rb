@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     redirect_to personal_home_path
   end
 
+
   private
 
   def user_params

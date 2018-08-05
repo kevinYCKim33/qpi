@@ -3,7 +3,7 @@
 <!--  Last Published: Tue Jul 31 2018 08:46:13 GMT+0000 (UTC)  -->
 <html data-wf-page="5b5dd320b008d1b6b7e7ac09" data-wf-site="5b5dd320b008d147d2e7ac04">
 <head>
-  <title> QPi Beta </title>
+  <title> <%= @community.title %> </title>
   <%= csrf_meta_tags %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta content="QPi Education is a professional development company that enables educators to implement STEM instruction with a focus on practical and project learning relevant to today’s world." name="description">
@@ -21,43 +21,57 @@
 
 <body class="body">
   <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
-    <nav role="navigation" class="nav-menu-2 w-nav-menu">
-      <a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a>
-      <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, communities_path, class: "nav-link w-nav-link w--current") %>
-      <a href="/favorites" class="nav-link w-nav-link">FAVORITES</a>
-      <%= link_to("PROFILE", personal_home_path, class: "nav-link w-nav-link") %>
-      <%= link_to("LOG OUT", destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
-
-
-    </nav>
+    <nav role="navigation" class="nav-menu-2 w-nav-menu"><a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a><a href="/explore-communities" class="nav-link w-nav-link">EXPLORE <br>COMMUNITIES</a><a href="/favorites" class="nav-link w-nav-link">FAVoriteS</a><a href="/profile" class="nav-link w-nav-link"> PROFILE</a><a href="/logout" class="nav-link w-nav-link">LOG OUT</a></nav>
     <div class="hamburger-button-2 w-nav-button">
       <div class="w-icon-nav-menu"></div>
     </div>
     <div class="social-footer w-hidden-medium w-hidden-small w-hidden-tiny"><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a><a href="#" class="social-icon-link w-inline-block"></a></div><a href="/workshops-loggedin" class="button_workshop_leftnav w-button">Attend a Workshop</a></div>
   <div class="content-wrapper">
-    <h1 class="main_heading_whitebg">COMMUNITIES</h1>
-    <div class="block_whtbg_shadow">
-      <p>Communities are a place where...<br>communicate with others, find resources, joining it, find like-minded people.<br>Each community usually aligns with a workshop</p>
-    </div>
-    <div class="community_wrapper">
-      <div class="row_community w-row">
-        <div class="w-col w-col-6">
-          <div><img src="<%=asset_path('KidandCar.png') %>" srcset="<%=asset_path('KidandCar-p-500.png')%> 500w, <%=asset_path('KidandCar-p-800.png')%> 800w, <%=asset_path('KidandCar-p-1080.png')%> 1080w, <%=asset_path('KidandCar.png')%> 1088w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
-            <h3 class="community-header">Introduction to Teaching Using Raspberry Pi</h3>
-          </div>
-          <%= render 'join_or_view_button', community: @communities.first %>
-        </div>
-        <div class="w-col w-col-6">
-          <div><img src="<%=asset_path('image_alamedafairekid2.jpg')%>" srcset="<%=asset_path('image_alamedafairekid2-p-500.jpeg')%> 500w, <%=asset_path('image_alamedafairekid2-p-800.jpeg')%> 800w, <%=asset_path('image_alamedafairekid2.jpg')%> 952w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
-            <h3 class="community-header">Introduction to Teaching Using Raspberry Pi 2</h3>
-            <%= render 'join_or_view_button', community: @communities.second %>
-          </div>
+    <h4 class="main_heading_whitebg"><%= @community.title %></h4>
+    <div data-collapse="small" data-animation="default" data-duration="400" class="navbar-5 w-nav">
+      <div class="container-3 w-container">
+        <nav role="navigation" class="w-nav-menu"><a href="/about-intro-raspberry-pi" class="nav-link-2 current2 w-nav-link w--current">About</a><a href="/workshops-intro-to-raspberry-pi" class="nav-link-2 current2 w-nav-link">Workshops</a><a href="#" class="nav-link-2 w-nav-link">Discussion</a><a href="#" class="nav-link-2 w-nav-link">Lessons</a><a href="#" class="nav-link-2 w-nav-link">Resources</a></nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
         </div>
       </div>
     </div>
+    <div class="block_whtbg_shadow">
+      <h2 class="content-heading">About</h2>
+      <p class="paragraph"><%= @community.summary %></p>
+    </div>
+    <div class="block_whtbg_shadow">
+      <h2 class="content-heading">Prerequisites</h2>
+      <p class="paragraph"><%= @community.prereqs %></p>
+    </div>
+    <div class="block_whtbg_shadow">
+      <h2 class="content-heading">Members</h2>
+      <div class="w-row">
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Alice Boyd</h3>
+        </div>
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Cynthia Bailey</h3>
+        </div>
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Catherine owens</h3>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Angela Chapman</h3>
+        </div>
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Maria Sims</h3>
+        </div>
+        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
+          <h3 class="member_name">Justin Harper</h3>
+        </div>
+      </div>
+    </div>
+    <div class="block_top50px"><a href="#" class="hollow_button_blue center w-button">LEAVE COMMUNITY</a></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
-</html>

@@ -1,12 +1,23 @@
 class User < ApplicationRecord
   has_many :workshops
   has_many :comments
+  has_many :community_users
+  has_many :communities, :through => :community_users
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   after_create :subscribe_user_to_mailing_list
+
+  def member?(community)
+    self.communities.include?(community)
+  end
+
+  def join_community(community)
+    self.communities << community
+  end
+
 
   private
 
