@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :comments
   resources :discussions
   resources :workshops
-  resources :communities
+
+  get 'explore-communities', to: 'communities#index', as: 'communities'
+  resources :communities, except: :index
+
   resources :community_users, only: [:create, :destroy]
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}, controllers: { sessions: "users/sessions", registrations: "users/registrations", passwords: "users/passwords" }
   devise_scope :user do

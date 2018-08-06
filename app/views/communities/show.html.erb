@@ -21,7 +21,13 @@
 
 <body class="body">
   <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
-    <nav role="navigation" class="nav-menu-2 w-nav-menu"><a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a><a href="/explore-communities" class="nav-link w-nav-link">EXPLORE <br>COMMUNITIES</a><a href="/favorites" class="nav-link w-nav-link">FAVoriteS</a><a href="/profile" class="nav-link w-nav-link"> PROFILE</a><a href="/logout" class="nav-link w-nav-link">LOG OUT</a></nav>
+    <nav role="navigation" class="nav-menu-2 w-nav-menu">
+      <a href="/my-communities" class="nav-link w-nav-link">MY <br>Communities</a>
+      <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, '/explore-communities', class: "nav-link w-nav-link w--current") %>
+      <a href="/favorites" class="nav-link w-nav-link">FAVORITES</a>
+      <%= link_to("PROFILE", personal_home_path, class: "nav-link w-nav-link") %>
+      <%= link_to("LOG OUT", destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
+    </nav>
     <div class="hamburger-button-2 w-nav-button">
       <div class="w-icon-nav-menu"></div>
     </div>
