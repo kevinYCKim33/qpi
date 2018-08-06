@@ -138,6 +138,10 @@ p {
   float: none;
 }
 
+.button_blue.align_left {
+  float: left;
+}
+
 .navigation-link {
   margin-top: 10px;
   -webkit-transition: all 300ms ease-in-out;
@@ -289,19 +293,28 @@ p {
 
 .hollow_button_blue.center {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
   float: none;
   text-align: center;
 }
 
 .hollow_button_blue.left_align {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   float: none;
+}
+
+.hollow_button_blue.full_width {
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-align: center;
 }
 
 .section-heading {
   margin-top: 0px;
   margin-bottom: 16px;
+  font-family: Montserrat, sans-serif;
 }
 
 .section-heading.centered {
@@ -453,9 +466,25 @@ p {
   margin-right: auto;
   margin-left: auto;
   float: left;
+  font-family: Roboto, sans-serif;
   color: #5761c6;
   text-align: center;
   text-decoration: none;
+}
+
+.link.right_align {
+  float: left;
+  text-align: right;
+}
+
+.link.left_align {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 50%;
+  text-align: left;
 }
 
 .link-2 {
@@ -492,6 +521,10 @@ p {
   width: 100%;
   float: none;
   text-align: center;
+}
+
+.button_green.full_width.register {
+  margin-top: -25px;
 }
 
 .section_transparent {
@@ -611,8 +644,12 @@ p {
 }
 
 .text-field {
+  display: block;
   width: 75%;
   margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Roboto, sans-serif;
 }
 
 .text-field.center {
@@ -620,6 +657,10 @@ p {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.text-field.left_align {
+  margin-left: 0px;
 }
 
 .button {
@@ -1051,6 +1092,7 @@ p {
   display: block;
   margin: 18px;
   float: none;
+  text-align: center;
 }
 
 .heading-5 {
@@ -1084,7 +1126,9 @@ p {
 }
 
 .social-link-group {
-  margin-bottom: 12px;
+  display: block;
+  margin: 30px auto 12px;
+  text-align: center;
 }
 
 .grey-rule {
@@ -1161,6 +1205,7 @@ p {
   max-width: 1200px;
   margin-left: 200px;
   padding: 50px;
+  font-family: Roboto, sans-serif;
   color: #404047;
 }
 
@@ -1213,7 +1258,7 @@ p {
   padding: 15px 30px;
   border: 2px solid #47cda4;
   border-radius: 4px;
-  background-color: hsla(0, 0%, 100%, 0);
+  background-color: #fff;
 }
 
 .hollow_button_green.full_width {
@@ -1258,9 +1303,16 @@ p {
   line-height: 30px;
 }
 
-.text-block-2 {
-  font-size: 20px;
-  line-height: 30px;
+.name_text {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .center_text {
@@ -1271,11 +1323,9 @@ p {
   text-align: center;
 }
 
-.member_name {
+.text_name_member {
   display: block;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
   letter-spacing: 3px;
 }
@@ -1346,6 +1396,124 @@ p {
 
 .heading-7 {
   letter-spacing: 3px;
+}
+
+.profile_label {
+  font-family: Roboto, sans-serif;
+}
+
+.text-field-2 {
+  margin-left: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+.image-9 {
+  position: relative;
+  top: -15px;
+  right: -24px;
+  float: right;
+  clear: none;
+}
+
+.image-10 {
+  float: right;
+}
+
+.text_field_discussion {
+  border: 0px none #000;
+  font-family: Roboto, sans-serif;
+}
+
+.row-3 {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #fff, #fff);
+}
+
+.div-block-5 {
+  background-color: #fff;
+}
+
+.text_discussion {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto, sans-serif;
+}
+
+.text-block-5 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.body-3 {
+  font-family: Roboto, sans-serif;
+}
+
+.row_discussion {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 0 hsla(240, 7%, 58%, .5);
+}
+
+.row_discussion.block_leftindent30px {
+  margin-left: 30px;
+}
+
+.text_date_discussion {
+  color: #8e8e9c;
+}
+
+.modal-wrapper {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: -webkit-linear-gradient(45deg, rgba(55, 74, 140, .75), rgba(55, 74, 140, .8));
+  background-image: linear-gradient(45deg, rgba(55, 74, 140, .75), rgba(55, 74, 140, .8));
+}
+
+.confirmation_leave {
+  padding: 25px 50px 50px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 hsla(240, 4%, 42%, .5);
+}
+
+.button_close_modal {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 30px;
+  padding: 5px;
+}
+
+.text-block-6 {
+  color: #fff;
+}
+
+.close-link {
+  position: static;
+  display: block;
+  margin-bottom: 25px;
+  float: none;
+  color: #5761c6;
+  text-align: right;
 }
 
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
@@ -1470,6 +1638,10 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     margin-left: 0px;
     padding: 30px;
   }
+  .heading_school {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1513,6 +1685,9 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .spc {
     margin-bottom: 30px;
   }
+  .button_green.full_width.register {
+    margin-top: 0px;
+  }
   .testimony-text {
     font-size: 16px;
     line-height: 18px;
@@ -1528,7 +1703,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     margin-bottom: 15px;
   }
   .social-link-group {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
   .grey-rule {
     display: block;
@@ -1568,11 +1743,15 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .button_blue {
     margin-bottom: 25px;
   }
+  .white-box {
+    margin-top: 60px;
+  }
   .hero-section.centered {
     padding-top: 60px;
     padding-bottom: 60px;
   }
   .hero-heading {
+    margin-top: 10px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -1590,12 +1769,16 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .grid-image {
     width: 35%;
   }
+  .button_green.full_width.register {
+    margin-top: 0px;
+  }
   .testimony-text {
     font-size: 14px;
     line-height: 20px;
   }
   .column {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 16px;
   }
   .button {
     margin-bottom: 25px;
@@ -1626,4 +1809,9 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .content-wrapper {
     padding: 20px;
   }
+  .heading_school {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
+

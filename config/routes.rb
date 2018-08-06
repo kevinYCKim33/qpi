@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :workshops
 
   get 'explore-communities', to: 'communities#index', as: 'communities'
+  get 'my-communities', to: 'communities#my_communities', as: 'my_communities'
   resources :communities, except: :index
 
   resources :community_users, only: [:create, :destroy]
