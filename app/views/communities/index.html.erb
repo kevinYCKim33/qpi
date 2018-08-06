@@ -35,6 +35,9 @@
   <div class="content-wrapper">
     <h1 class="main_heading_whitebg">COMMUNITIES</h1>
     <div class="block_whtbg_shadow">
+      <% if flash[:message] %>
+        <p style="color:red;"> <%= flash[:message] %> </p>
+      <% end %>
       <p>Communities are a place where...<br>communicate with others, find resources, joining it, find like-minded people.<br>Each community usually aligns with a workshop</p>
     </div>
     <div class="community_wrapper">
