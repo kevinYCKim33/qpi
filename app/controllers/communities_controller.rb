@@ -4,12 +4,7 @@ class CommunitiesController < ApplicationController
   end
 
   def show
-    # if the current_user is not in the community
-    # join it first
-    # then take them there
     @community = Community.find(params[:id])
-    if current_user.member?(@community) == false
-      current_user.join_community(@community)
-    end
+    @community_user = CommunityUser.find_by(user_id: current_user.id, community_id: @community.id)
   end
 end

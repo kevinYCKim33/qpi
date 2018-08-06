@@ -69,7 +69,12 @@
         </div>
       </div>
     </div>
-    <div class="block_top50px"><a href="#" class="hollow_button_blue center w-button">LEAVE COMMUNITY</a></div>
+    <%#= form_for dealing, method: :delete do |f| %>
+      <%#= f.submit "Leave Group", onclick: "return confirm('Cancel the request?');"  %>
+    <%# end %>
+    <div class="block_top50px">
+      <%= link_to "LEAVE COMMUNITY", @community_user, method: :delete, class: "hollow_button_blue center w-button", data: { confirm: "Are you sure you would like to leave?"}  %>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
