@@ -56,9 +56,22 @@
         </div>
       </div>
     </div>
+    <%#= link_to "LEAVE COMMUNITY", '#', id: "myBtn", class: "hollow_button_blue center w-button" %>
+    <div id="myModal" class="modal2">
+      <!-- Modal content -->
+      <div class="confirmation_leave2 w-clearfix">
+        <span class="close">&times;</span>
+        <h2 style="font-size: 20px">Confirm you&#x27;d like to leave the community.</h2>
+        <%= link_to "I'd like to leave", @community_user, method: :delete, class: "button_blue full-width w-button" %>
+        <a href="#" data-w-id="1e010a84-1696-0cea-bfca-65d957558b41" class="hollow_button_blue full_width w-button stay">I&#x27;d Like to stay</a>
+      </div>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <%= javascript_include_tag 'webflow'%> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <%= javascript_include_tag 'script', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+ <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

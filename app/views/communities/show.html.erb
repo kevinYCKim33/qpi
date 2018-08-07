@@ -22,14 +22,15 @@
 </head>
 
 <body class="body">
-  <%= content_tag :div, class:"modal-wrapper", :data => { :'w-id' => "09fc853f-e72d-d12d-6b2f-af31820c98e5" } do  %>
-    <%= content_tag :div, class: "confirmation_leave w-clearfix" do %>
-      <%= link_to "Close", '#', class: "close-link", :data => { :'w-id' => "0964e2e0-02b2-46cd-3922-9ae642792bdc" } %>
-      <h2>Confirm you&#x27;d like to leave the community.</h2>
-      <%= link_to "I'd like to leave", communities_path, class: "button_blue full-width w-button", :data => { :'w-id' => "f6dd600e-a79e-8fb1-0e68-a50bba35e3d3" } %>
-      <%= link_to "I'd like to stay", '#', class: "hollow_button_blue full_width w-button", :data => { :'w-id' => "1e010a84-1696-0cea-bfca-65d957558b41" } %>
-    <% end %>
-  <% end %>
+  <div id="myModal" class="modal2">
+    <!-- Modal content -->
+    <div class="confirmation_leave2 w-clearfix">
+      <span class="close">&times;</span>
+      <h2 style="font-size: 20px">Confirm you&#x27;d like to leave the community.</h2>
+      <%= link_to "I'd like to leave", @community_user, method: :delete, class: "button_blue full-width w-button" %>
+      <a href="#" data-w-id="1e010a84-1696-0cea-bfca-65d957558b41" class="hollow_button_blue full_width w-button stay">I&#x27;d Like to stay</a>
+    </div>
+  </div>
 
   <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
     <nav role="navigation" class="nav-menu-2 w-nav-menu">
@@ -86,13 +87,8 @@
         </div>
       </div>
     </div>
-    <%#= form_for dealing, method: :delete do |f| %>
-      <%#= f.submit "Leave Group", onclick: "return confirm('Cancel the request?');"  %>
-    <%# end %>
     <div class="block_top50px">
-      <%= link_to "LEAVE COMMUNITY", @community_user, method: :delete, class: "hollow_button_blue center w-button", data: { confirm: "Are you sure you would like to leave?"}  %>
-      <!-- <a href="#" data-w-id="f80ccaa8-36f3-8f07-9649-a84da7c1aa91" class="hollow_button_blue center w-button">LEAVE COMMUNITY</a> -->
-      <%= link_to "LEAVE COMMUNITY", '#', class: "hollow_button_blue center w-button", :data => { :'w-id' => "f80ccaa8-36f3-8f07-9649-a84da7c1aa91" } %>
+      <%= link_to "LEAVE COMMUNITY", '#', id: "myBtn", class: "hollow_button_blue center w-button" %>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
