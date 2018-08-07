@@ -1467,6 +1467,7 @@ p {
 }
 
 .modal-wrapper {
+  display: none;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -1814,4 +1815,3 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     line-height: 18px;
   }
 }
-
