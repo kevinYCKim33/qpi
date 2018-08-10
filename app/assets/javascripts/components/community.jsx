@@ -1,4 +1,4 @@
-class Post extends React.Component {
+class Community extends React.Component {
   render() {
     return <h1>{this.props.title}</h1>
   }
