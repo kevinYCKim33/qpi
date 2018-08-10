@@ -18,9 +18,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'landing#home'
-  get '/beta_home', to: 'landing#beta_home', as: 'beta_home'
+  get '/workshops', to: 'landing#workshops', as: 'guest_workshops'
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
+
 
   get '/home', to: 'users#home', as: 'personal_home'
 

@@ -1,13 +1,8 @@
 class LandingController < ApplicationController
 
   def home
-    # render :layout => false
-    # @title = 'QPi Education | STEM Professional Development'
+    @title = 'QPi Education | STEM Professional Development'
     redirect_to personal_home_path if user_signed_in?
-  end
-
-  def beta_home
-
   end
 
   def about
@@ -18,11 +13,8 @@ class LandingController < ApplicationController
     @title = 'Contact'
   end
 
-  def logged_in_home
-    # binding.pry
-    if !user_signed_in?
-      redirect_to root_path
-    end
+  def workshops
+    @title = 'Workshops'
   end
 
 end
