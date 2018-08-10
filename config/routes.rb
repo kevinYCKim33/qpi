@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :likes
   resources :comments
   resources :discussions
-  resources :workshops
+  # resources :workshops
 
   get 'explore-communities', to: 'communities#index', as: 'communities'
   get 'my-communities', to: 'communities#my_communities', as: 'my_communities'
