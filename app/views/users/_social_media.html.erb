@@ -1,23 +1,23 @@
 <div class="block_socialmedia">
-  <% if user.facebook != '' %>
+  <% if user.facebook != '' && user.facebook != nil %>
     <a href="<%=append_https_if_necessary(user.facebook)%>" class="social-icon-link-2 w-inline-block" target="_blank">
       <img src="<%=asset_path('social-02.svg')%>" width="25">
     </a>
   <% end %>
 
-  <% if user.pinterest != '' %>
+  <% if user.pinterest != '' && user.pinterest != nil %>
     <a href="<%=append_https_if_necessary(user.pinterest)%>" class="social-icon-link-2 w-inline-block" target="_blank">
       <img src="<%=asset_path('social-11.svg')%>" width="25">
     </a>
   <% end %>
 
-  <% if user.twitter != '' %>
+  <% if user.twitter != '' && user.twitter != nil %>
     <a href="<%=append_https_if_necessary(user.twitter)%>" class="social-icon-link-2 w-inline-block" target="_blank">
       <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742372f43c5a631_social-18.svg" width="25">
     </a>
   <% end %>
 
-  <% if user.google != '' %>
+  <% if user.google != '' && user.google != nil %>
     <a href="<%=append_https_if_necessary(user.google)%>" class="social-icon-link-2 w-inline-block" target="_blank">
       <img src="<%=asset_path('social-06.svg')%>" width="25">
     </a>
