@@ -2,9 +2,10 @@
 
 class Users::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
-  # def new
-  #   super
-  # end
+  def new
+    @title = 'Forgot Password'
+    super
+  end
 
   # POST /resource/password
   # def create
@@ -12,9 +13,10 @@ class Users::PasswordsController < Devise::PasswordsController
   # end
 
   # GET /resource/password/edit?reset_password_token=abcdef
-  # def edit
-  #   super
-  # end
+  def edit
+    @title = 'Reset Password'
+    super
+  end
 
   # PUT /resource/password
   # def update

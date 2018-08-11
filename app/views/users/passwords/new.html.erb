@@ -1,20 +1,11 @@
-<div data-collapse="small" data-animation="default" data-duration="400" class="navigation-bar w-nav">
-  <div class="w-container">
-    <nav role="navigation" class="navigation-menu w-clearfix w-nav-menu"><img src="<%=asset_path('Logo_CircleOnly.svg')%>" width="46" class="brand-link"><a href="/contact" class="navigation-link w-nav-link">Workshops</a><a href="/contact" class="navigation-link w-nav-link">About</a><a href="/contact" class="navigation-link w-nav-link">Contact</a><a href="/sign-up" class="button_blue w-button">SIGN UP FREE</a><a href="/login" class="hollow_button_blue w-button">Log IN</a></nav>
-    <div class="hamburger-button w-nav-button">
-      <div class="w-icon-nav-menu"></div>
-    </div>
-  </div>
-</div>
-
 <div class="container_white_shadow w-container">
-  <h2 class="section-heading centered">Password RESET</h2>
-  <h5 class="heading-7">Enter the <strong>email address</strong> that you used to register. We&#x27;ll send you an email with your username and a link to reset your password.</h5>
+  <h2 class="section-heading centered">Forgot Password?</h2>
+  <div class="text_password">ENTER THE EMAIL ADDRESS THAT YOU USED TO REGISTER. WE&#x27;LL SEND YOU AN <strong>EMAIL WITH A LINK</strong> TO RESET YOUR PASSWORD.</div>
   <div class="w-form">
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
-        <%= f.email_field :email, required: true, class: "text-field w-input", maxlength: 256, placeholder: 'Enter your email', required: true %>
-        <%= f.submit "Submit", class: "hollow_button_blue left_align w-button" %>
+    <%= devise_error_messages! %>
+    <%= f.email_field :email, required: true, class: "text-field w-input", maxlength: 256, placeholder: 'Enter your email', required: true %>
+    <%= f.submit "Submit", class: "button_hollow_blue centered w-button" %>
     <% end %>
   </div>
 </div>
