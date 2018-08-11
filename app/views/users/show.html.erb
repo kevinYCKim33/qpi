@@ -42,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div><%= link_to("Edit Profile", edit_user_path(@user), class: "button_hollow_blue centered w-button") %></div>
+          <%= render 'email_or_edit_button', user: @user %>
         </div>
       </div>
     </div>
