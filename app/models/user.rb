@@ -14,9 +14,9 @@ class User < ApplicationRecord
     self.communities.include?(community)
   end
 
-  def join_community(community)
-    self.communities << community
-  end
+  # def join_community(community)
+  #   self.communities << community
+  # end
 
 
   private
@@ -24,9 +24,11 @@ class User < ApplicationRecord
   def subscribe_user_to_mailing_list
     # SubscribeUserToMailingListJob.perform_later(self)
     # implement with Sidekiq later on
-    gibbon = Gibbon::Request.new
-    # gibbon.lists(list_id)({:id => ENV["MAILCHIMP_LIST_ID"], :email => {:email => user.email}, :double_optin => false})
-    gibbon.lists(ENV["MAILCHIMP_LIST_ID"]).members.create(body: {email_address: self.email, status: "subscribed", merge_fields: {FNAME: self.name}})
+    if self.subscribed
+      gibbon = Gibbon::Request.new
+      # gibbon.lists(list_id)({:id => ENV["MAILCHIMP_LIST_ID"], :email => {:email => user.email}, :double_optin => false})
+      gibbon.lists(ENV["MAILCHIMP_LIST_ID"]).members.create(body: {email_address: self.email, status: "subscribed", merge_fields: {FNAME: self.name}})
+    end
   end
 
 end

@@ -1,18 +1,9 @@
-  <div data-collapse="small" data-animation="default" data-duration="400" class="navigation-bar w-nav">
-    <div class="w-container">
-      <nav role="navigation" class="navigation-menu w-clearfix w-nav-menu"><img src="<%=asset_path('Logo_CircleOnly.svg')%>" width="46" class="brand-link"><a href="/contact" class="navigation-link w-nav-link">Workshops</a><a href="/contact" class="navigation-link w-nav-link">About</a><a href="/contact" class="navigation-link w-nav-link">Contact</a><a href="/register" class="button_blue w-button">SIGN UP FREE</a><a href="/login" class="hollow_button_blue w-button w--current">Log IN</a></nav>
-      <div class="hamburger-button w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
-  </div>
-
   <div class="section">
-    <div class="container w-container">
-      <% if flash[:message] %>
-        <div class="text-block-1", style="color:green;"><%= flash[:message] %></div>
-      <% end %>
+    <div class="container_80px w-container">
       <h2 class="section-heading">LOG INTO YOUR ACCOUT</h2>
+      <% if flash[:message] %>
+        <div class="text_sky-blue">Check your email for a link to reset your password. If it doesn&#x27;t appear within a few minutes, check your spam folder.</div>
+      <% end %>
       <div class="form-block w-form">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>

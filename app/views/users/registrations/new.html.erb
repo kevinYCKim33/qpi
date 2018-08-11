@@ -1,26 +1,39 @@
-  <div data-collapse="small" data-animation="default" data-duration="400" class="navigation-bar w-nav">
-    <div class="w-container">
-      <nav role="navigation" class="navigation-menu w-clearfix w-nav-menu"><img src="<%=asset_path('Logo_CircleOnly.svg')%>" width="46" class="brand-link"><a href="contact.html" class="navigation-link w-nav-link">Workshops</a><a href="contact.html" class="navigation-link w-nav-link">Communities</a><a href="contact.html" class="navigation-link w-nav-link">Contact</a><a href="/register" class="button_blue w-button w--current">SIGN UP FREE</a><a href="#" class="hollow_button_blue w-button">Log IN</a></nav>
-      <div class="hamburger-button w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
+<div class="section">
+  <div class="container_80px w-container">
+    <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
+    <div class="form-block w-form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: "email-form"}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <%= f.text_field :name, autofocus: true, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Full Name' %>
+
+        <%= f.email_field :email, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Email' %>
+
+        <%= f.password_field :password, class: "text-field center w-input", maxlength: 256, placeholder: 'Password',  autocomplete: "off" %>
+        <div class="checkbox_subscribe width_75 w-checkbox">
+          <%= f.check_box :subscribed, class: "checkbox w-checkbox-input", checked: true %>
+          <label for="Subscribe" class="checkbox-label w-form-label">Subscribe to QPi&#x27;s newsletter to be first notified about upcoming workshops.</label>
+        </div>
+
+        <div class="text_agreement">By clicking on Sign Up, you agree to QPi Education&#x27;s <a href="#" class="link-2">Terms and Condition of Use</a> and <a href="#" class="link-2">Privacy Policy</a>.<a href="#"></a></div>
+
+        <%= f.submit "SIGN UP", class:'button_blue _75width center w-button' %>
+      <% end %>
     </div>
   </div>
-  <div class="section">
-    <div class="container w-container">
-      <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
-      <div class="w-form">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: "email-form"}) do |f| %>
-          <%= devise_error_messages! %>
+</div>
 
-          <%= f.text_field :name, autofocus: true, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Full Name' %>
-
-          <%= f.email_field :email, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Email' %>
-
-          <%= f.password_field :password, class: "text-field center w-input", maxlength: 256, placeholder: 'Password',  autocomplete: "off" %>
-
-          <%= f.submit "SIGN UP", class:'button_blue _75width center w-button' %>
-        <% end %>
-      </div>
+<!-- <div class="section">
+  <div class="container_80px w-container">
+    <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
+    <div class="form-block w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/profile" redirect="/profile" class="sign-up">
+        <input type="text" class="text-field center w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Full Name" id="Full-Name" required="">
+        <input type="email" class="text-field center w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" id="Email-2" required="">
+        <input type="password" class="text-field center w-input" maxlength="256" name="Password" data-name="Password" placeholder="Password" id="Password" required="">
+        <div class="checkbox_subscribe width_75 w-checkbox"><input type="checkbox" id="Subscribe" name="Subscribe" data-name="Subscribe" checked="" class="checkbox w-checkbox-input"><label for="Subscribe" class="checkbox-label w-form-label">Subscribe to QPi&#x27;s newsletter to be first notified about upcoming workshops.</label></div>
+        <div class="text_agreement">By clicking on Sign Up, you agree to QPi Education&#x27;s <a href="#" class="link-2">Terms and Condition of Use</a> and <a href="#" class="link-2">Privacy Policy</a>.<a href="#"></a></div><input type="submit" value="SIGN UP" data-wait="Please wait..." class="button_blue _75width center w-button"></form>
     </div>
+    <div class="text_agreement center">Already have an account? <a target="_blank" href="/login" class="link_signup">Log In</a>.</div>
   </div>
+</div> -->
