@@ -9,6 +9,7 @@ class CommunitiesController < ApplicationController
 
   def show
     @community = Community.find(params[:id])
+    # problem child...might as well just do a slip via active record, bypass posting
     @community_user = CommunityUser.find_by(user_id: current_user.id, community_id: @community.id)
     if @community_user == nil
       flash[:message] = "You have not joined that community yet!"

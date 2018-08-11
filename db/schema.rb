@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180810174013) do
+ActiveRecord::Schema.define(version: 20180811082003) do
 
   create_table "assessments", force: :cascade do |t|
     t.integer "community_id"
@@ -101,6 +101,10 @@ ActiveRecord::Schema.define(version: 20180810174013) do
     t.string "location"
     t.boolean "admin"
     t.boolean "subscribed"
+    t.string "facebook"
+    t.string "pinterest"
+    t.string "twitter"
+    t.string "google"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

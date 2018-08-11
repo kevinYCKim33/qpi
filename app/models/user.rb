@@ -8,6 +8,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :name, presence: true
+  validates :email, presence: true 
+
+
   after_create :subscribe_user_to_mailing_list
 
   def member?(community)

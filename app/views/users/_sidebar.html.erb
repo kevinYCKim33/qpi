@@ -1,0 +1,21 @@
+<div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
+  <nav role="navigation" class="nav-menu-2 w-nav-menu">
+    <%= link_to("MY <br /> COMMUNITIES".html_safe, my_communities_path, class: "nav-link w-nav-link #{active?(my_communities_path)}") %>
+    <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, communities_path, class: "nav-link w-nav-link #{active?(communities_path)}") %>
+    <%= link_to("PROFILE", user_path(current_user), class: "nav-link w-nav-link #{active?(user_path(current_user))}") %>
+    <%= link_to("LOG OUT", destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
+  </nav>
+  <div class="hamburger-button-2 w-nav-button">
+    <div class="w-icon-nav-menu"></div>
+  </div>
+  <div class="social-footer w-hidden-medium w-hidden-small w-hidden-tiny">
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+    <a href="#" class="social-icon-link w-inline-block"></a>
+  </div>
+    <a href="workshops-loggedin.html" class="button_leftnav w-button">Attend a Workshop</a>
+</div>

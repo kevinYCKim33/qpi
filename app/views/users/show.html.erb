@@ -1,0 +1,65 @@
+<div class="content-wrapper">
+  <h1 class="name_heading"><%= @user.name %></h1>
+  <div>
+    <div class="block_top50px">
+      <div class="w-row">
+        <div class="w-col w-col-4"><img src="<%=asset_path('Profile-Default.svg')%>" width="184" class="image_member">
+          <div class="block_socialmedia">
+            <a href="#" class="social-icon-link-2 w-inline-block">
+              <img src="<%=asset_path('social-02.svg')%>" width="25">
+            </a>
+            <a href="#" class="social-icon-link-2 w-inline-block">
+              <img src="<%=asset_path('social-11.svg')%>" width="25">
+            </a>
+            <a href="#" class="social-icon-link-2 w-inline-block">
+              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742372f43c5a631_social-18.svg" width="25">
+            </a>
+            <a href="#" class="social-icon-link-2 w-inline-block">
+              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379fa5c5a645_social-09.svg" width="25">
+            </a>
+            <a href="#" class="social-icon-link-2 w-inline-block">
+              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379ca2c5a616_social-30.svg" width="25">
+            </a>
+          </div>
+        </div>
+        <div class="w-col w-col-8">
+          <div class="profile_block">
+            <div class="basic-info w-row">
+              <div class="w-col w-col-5">
+                <h3 class="profile_heading">Location</h3>
+              </div>
+              <div class="w-col w-col-7">
+                <div class="profile_text"><%= @user.location %></div>
+              </div>
+            </div>
+            <div class="basic-info w-row">
+              <div class="w-col w-col-5">
+                <h3 class="profile_heading">Occupation</h3>
+              </div>
+              <div class="w-col w-col-7">
+                <div class="profile_text"><%= @user.occupation %></div>
+              </div>
+            </div>
+            <div class="basic-info w-row">
+              <div class="w-col w-col-5">
+                <h3 class="profile_heading">Grade</h3>
+              </div>
+              <div class="w-col w-col-7">
+                <div class="profile_text"><%= @user.grade %></div>
+              </div>
+            </div>
+            <div class="basic-info w-row">
+              <div class="w-col w-col-5">
+                <h3 class="profile_heading">SCHOOL</h3>
+              </div>
+              <div class="w-col w-col-7">
+                <div class="profile_text"><%= @user.school %></div>
+              </div>
+            </div>
+          </div>
+          <div><%= link_to("Edit Profile", edit_user_path(@user), class: "button_hollow_blue centered w-button") %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

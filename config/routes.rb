@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'landing#contact', as: 'contact'
 
 
-  get '/home', to: 'users#home', as: 'personal_home'
+  # get '/home', to: 'users#home', as: 'personal_home'
 
   get 'images/KidandCar.png', to: 'images#KidandCar'
   # get 'images/Manzanita.jpeg', to:'images#Manzanita'

@@ -2,7 +2,7 @@ class LandingController < ApplicationController
 
   def home
     @title = 'QPi Education | STEM Professional Development'
-    redirect_to personal_home_path if user_signed_in?
+    redirect_to my_communities_path if user_signed_in?
   end
 
   def about
