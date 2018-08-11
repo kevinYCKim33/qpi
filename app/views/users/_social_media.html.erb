@@ -1,0 +1,30 @@
+<div class="block_socialmedia">
+  <% if user.facebook != '' %>
+    <a href="<%=append_https_if_necessary(user.facebook)%>" class="social-icon-link-2 w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-02.svg')%>" width="25">
+    </a>
+  <% end %>
+
+  <% if user.pinterest != '' %>
+    <a href="<%=append_https_if_necessary(user.pinterest)%>" class="social-icon-link-2 w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-11.svg')%>" width="25">
+    </a>
+  <% end %>
+
+  <% if user.twitter != '' %>
+    <a href="<%=append_https_if_necessary(user.twitter)%>" class="social-icon-link-2 w-inline-block" target="_blank">
+      <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742372f43c5a631_social-18.svg" width="25">
+    </a>
+  <% end %>
+
+  <% if user.google != '' %>
+    <a href="<%=append_https_if_necessary(user.google)%>" class="social-icon-link-2 w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-06.svg')%>" width="25">
+    </a>
+  <% end %>
+
+    <a href="mailTo:<%=user.email%>" class="social-icon-link-2 w-inline-block">
+      <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379ca2c5a616_social-30.svg" width="25">
+    </a>
+
+</div>

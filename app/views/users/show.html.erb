@@ -3,24 +3,9 @@
   <div>
     <div class="block_top50px">
       <div class="w-row">
-        <div class="w-col w-col-4"><img src="<%=asset_path('Profile-Default.svg')%>" width="184" class="image_member">
-          <div class="block_socialmedia">
-            <a href="#" class="social-icon-link-2 w-inline-block">
-              <img src="<%=asset_path('social-02.svg')%>" width="25">
-            </a>
-            <a href="#" class="social-icon-link-2 w-inline-block">
-              <img src="<%=asset_path('social-11.svg')%>" width="25">
-            </a>
-            <a href="#" class="social-icon-link-2 w-inline-block">
-              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742372f43c5a631_social-18.svg" width="25">
-            </a>
-            <a href="#" class="social-icon-link-2 w-inline-block">
-              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379fa5c5a645_social-09.svg" width="25">
-            </a>
-            <a href="#" class="social-icon-link-2 w-inline-block">
-              <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379ca2c5a616_social-30.svg" width="25">
-            </a>
-          </div>
+        <div class="w-col w-col-4">
+          <img src="<%=asset_path('Profile-Default.svg')%>" width="184" class="image_member">
+          <%= render '/users/social_media', user: @user %>
         </div>
         <div class="w-col w-col-8">
           <div class="profile_block">
