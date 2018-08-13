@@ -1,0 +1,16 @@
+<div id = "about" class="active-section">
+  <div class="block_whtbg_shadow">
+    <h2 class="content-heading">About</h2>
+    <p class="paragraph"><%= community.summary %></p>
+  </div>
+  <div class="block_whtbg_shadow">
+    <h2 class="content-heading">Prerequisites</h2>
+    <p class="paragraph"><%= community.prereqs %></p>
+  </div>
+  <div class="block_whtbg_shadow">
+    <%= render 'members', members: community.users %>
+  </div>
+  <div class="block_top50px">
+    <%= link_to "LEAVE COMMUNITY", '#', id: "modalTriggerButton", class: "button_hollow_blue centered w-button" %>
+  </div>
+</div>

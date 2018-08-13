@@ -14,6 +14,7 @@ class CommunitiesController < ApplicationController
 
   def show
     @community = Community.find(params[:id])
+    @title = @community.title
     # problem child...might as well just do a slip via active record, bypass posting
     @community_user = CommunityUser.find_by(user_id: current_user.id, community_id: @community.id)
     if @community_user == nil

@@ -10,49 +10,12 @@
 
   <div class="content-wrapper">
     <h4 class="main_heading_whitebg"><%= @community.title %></h4>
-    <div data-collapse="small" data-animation="default" data-duration="400" class="navbar-5 w-nav">
-      <div class="container-3 w-container">
-        <nav role="navigation" class="w-nav-menu"><a href="/about-intro-raspberry-pi" class="nav-link-2 current2 w-nav-link w--current">About</a><a href="/workshops-intro-to-raspberry-pi" class="nav-link-2 current2 w-nav-link">Workshops</a><a href="#" class="nav-link-2 w-nav-link">Discussion</a><a href="#" class="nav-link-2 w-nav-link">Lessons</a><a href="#" class="nav-link-2 w-nav-link">Resources</a></nav>
-        <div class="w-nav-button">
-          <div class="w-icon-nav-menu"></div>
-        </div>
-      </div>
-    </div>
-    <div class="block_whtbg_shadow">
-      <h2 class="content-heading">About</h2>
-      <%#= react_component("Community", {title: "Hello World"}) %>
-      <p class="paragraph"><%= @community.summary %></p>
-    </div>
-    <div class="block_whtbg_shadow">
-      <h2 class="content-heading">Prerequisites</h2>
-      <p class="paragraph"><%= @community.prereqs %></p>
-    </div>
-    <div class="block_whtbg_shadow">
-      <h2 class="content-heading">Members</h2>
-      <div class="w-row">
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Alice Boyd</h3>
-        </div>
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Cynthia Bailey</h3>
-        </div>
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Catherine owens</h3>
-        </div>
-      </div>
-      <div class="w-row">
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Angela Chapman</h3>
-        </div>
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Maria Sims</h3>
-        </div>
-        <div class="w-col w-col-4"><img src="images/Profile-Default.svg" width="150" class="members_pics">
-          <h3 class="member_name">Justin Harper</h3>
-        </div>
-      </div>
-    </div>
-    <div class="block_top50px">
-      <%= link_to "LEAVE COMMUNITY", '#', id: "modalTriggerButton", class: "button_hollow_blue centered w-button" %>
-    </div>
+    <%= render 'community_navbar' %>
+    <%#= react_component("Community", {community: @community}) %>
+    <%= render 'about', community: @community %>
+
+    <%= render 'workshops', workshops: @community.workshops %>
+
+    
+
   </div>
