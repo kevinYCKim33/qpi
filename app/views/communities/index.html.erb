@@ -10,26 +10,16 @@
       <div class="row_community w-row">
         <div class="w-col w-col-6">
           <div><img src="<%=asset_path('KidandCar.png') %>" srcset="<%=asset_path('KidandCar-p-500.png')%> 500w, <%=asset_path('KidandCar-p-800.png')%> 800w, <%=asset_path('KidandCar-p-1080.png')%> 1080w, <%=asset_path('KidandCar.png')%> 1088w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
-            <h3 class="community-header">Introduction to Teaching Using Raspberry Pi</h3>
+            <h3 class="header_community"><%= @communities.first.title %></h3>
           </div>
           <%= render 'join_or_view_button', community: @communities.first %>
         </div>
         <div class="w-col w-col-6">
           <div><img src="<%=asset_path('image_alamedafairekid2.jpg')%>" srcset="<%=asset_path('image_alamedafairekid2-p-500.jpeg')%> 500w, <%=asset_path('image_alamedafairekid2-p-800.jpeg')%> 800w, <%=asset_path('image_alamedafairekid2.jpg')%> 952w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
-            <h3 class="community-header">Introduction to Teaching Using Raspberry Pi 2</h3>
-            <%= render 'join_or_view_button', community: @communities.second %>
+            <h3 class="header_community">New Community <br/> Coming Soon</h3>
           </div>
         </div>
       </div>
     </div>
-    <%#= link_to "LEAVE COMMUNITY", '#', id: "myBtn", class: "hollow_button_blue center w-button" %>
-    <div id="myModal" class="modal2">
-      <!-- Modal content -->
-      <div class="confirmation_leave2 w-clearfix">
-        <span class="close">&times;</span>
-        <h2 style="font-size: 20px">Confirm you&#x27;d like to leave the community.</h2>
-        <%= link_to "I'd like to leave", @community_user, method: :delete, class: "button_blue full-width w-button" %>
-        <a href="#" data-w-id="1e010a84-1696-0cea-bfca-65d957558b41" class="hollow_button_blue full_width w-button stay">I&#x27;d Like to stay</a>
-      </div>
-    </div>
+
   </div>
