@@ -1,10 +1,10 @@
-  <div id="myModal" class="modal2">
+  <div id="confirmModal" class="confirmation_modal">
     <!-- Modal content -->
-    <div class="confirmation_leave2 w-clearfix">
-      <span class="close">&times;</span>
-      <h2 style="font-size: 20px">Confirm you&#x27;d like to leave the community.</h2>
+    <div class="confirmation_box w-clearfix">
+      <span class="close">&times;</span> <br /> <br />
+      <h2>Confirm you&#x27;d like to leave the community.</h2>
       <%= link_to "I'd like to leave", @community_user, method: :delete, class: "button_blue full-width w-button" %>
-      <a href="#" data-w-id="1e010a84-1696-0cea-bfca-65d957558b41" class="hollow_button_blue full_width w-button stay">I&#x27;d Like to stay</a>
+      <a href="#" data-w-id="1e010a84-1696-0cea-bfca-65d957558b41" class="button_hollow_blue full_width w-button stay">I&#x27;d Like to stay</a>
     </div>
   </div>
 
@@ -53,7 +53,6 @@
       </div>
     </div>
     <div class="block_top50px">
-      <%= link_to "LEAVE COMMUNITY", '#', id: "myBtn", class: "hollow_button_blue center w-button" %>
+      <%= link_to "LEAVE COMMUNITY", '#', id: "modalTriggerButton", class: "button_hollow_blue centered w-button" %>
     </div>
   </div>
-  <%#= javascript_include_tag 'script', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->

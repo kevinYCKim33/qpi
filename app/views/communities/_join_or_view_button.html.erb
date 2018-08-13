@@ -3,6 +3,6 @@
 <% else %>
   <%= form_with url: community_users_path do |f| %>
     <%= f.hidden_field :community_id, value: community.id %>
-    <%= f.submit "JOIN COMMUNITY", class: "button_green full_width w-button", onclick: "return confirm('Join this group?');"  %>
+    <%= f.submit "JOIN COMMUNITY", class: "button_green full_width w-button" %>
   <% end %>
 <% end %>

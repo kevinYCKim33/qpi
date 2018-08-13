@@ -1,19 +1,10 @@
-// $(document).ready(function() {
-//
-//     $('.modal-background').fadeIn();
-//
-//   $('.close-modal').click(function() {
-//     $('.modal-background').fadeOut();
-//   });
-// });
-
 document.addEventListener('turbolinks:load',function() {
-  // console.log('hi im working');
-  // Get the modal
-var modal = document.getElementById('myModal');
+
+// Get the modal
+var modal = document.getElementById('confirmModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("modalTriggerButton");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
