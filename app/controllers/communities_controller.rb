@@ -1,9 +1,14 @@
 class CommunitiesController < ApplicationController
+
+  # 'explore-communities'
   def index
+    @title = 'Explore Communities'
     @communities = Community.all
   end
 
+  # 'my-communities'
   def my_communities
+    @title = 'My Communities'
     @communities = current_user.communities
   end
 

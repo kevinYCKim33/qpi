@@ -7,13 +7,14 @@
 <% else %>
   <div class="community_wrapper">
     <div class="row_community w-row">
-      <div class="w-col w-col-6">
-        <a href="/about-intro-raspberry-pi" class="link-block w-inline-block">
-          <img src="images/KidandCar.png" srcset="images/KidandCar-p-500.png 500w, images/KidandCar-p-800.png 800w, images/KidandCar-p-1080.png 1080w, images/KidandCar.png 1088w" sizes="100vw" class="image_community">
-          <h3 class="community-header">Introduction to Teaching Using Raspberry Pi</h3>
-        </a>
-      </div>
-      <div class="w-col w-col-6"></div>
+      <% communities.each do |community| %>
+        <div class="w-col w-col-6">
+          <%= link_to community_path(community), class: "link-block w-inline-block" do %>
+            <img src="<%=asset_path('KidandCar.png')%>" srcset="<%=asset_path('KidandCar-p-500.png')%> 500w, <%=asset_path('KidandCar-p-800.png')%> 800w, <%=asset_path('KidandCar-p-1080.png')%> 1080w, <%=asset_path('KidandCar.png')%> 1088w" sizes="100vw" class="image_community">
+            <h3 class="header_community"><%= community.title %></h3>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>

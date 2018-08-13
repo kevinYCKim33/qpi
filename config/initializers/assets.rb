@@ -16,4 +16,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 ## ALTERNATIVE TO PUTTING CSS ALL IN THE MANIFEST (WHICH IS THE PREFERRED METHOD)
   ## THEN FOLLOW UP WITH INCLUDING stylesheet_link_tag IN THE APPLICATION.HTML.ERB
 # Rails.application.config.assets.precompile += %w( normalize.css webflow.css qpi.css )
-Rails.application.config.assets.precompile += %w(webflow.js script.js)
+Rails.application.config.assets.precompile += %w(webflow.js leaveCommunityModal.js)
