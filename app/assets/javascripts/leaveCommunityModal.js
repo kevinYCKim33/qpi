@@ -41,15 +41,20 @@ document.addEventListener('turbolinks:load',function() {
     activeSection.className = 'hidden-section';
 
     let prevCurrentNav = $('.w--current')[0];
-    prevCurrentNav.className = 'nav-link-2 current2 w-nav-link';
-    this.className =  'nav-link-2 current2 w-nav-link w--current';
+    prevCurrentNav.className = 'nav-link-2 current2 w-nav-link'; // get rid of '.w--current'
+    this.className =  'nav-link-2 current2 w-nav-link w--current'; // add '.w-current' to clicked button
 
-    let buttonId = this.id;
-    if (buttonId == "workshopsButton") {
-      $('#workshops').removeClass('hidden-section').addClass('active-section');
-    }
-    if (buttonId == 'aboutButton') {
-      $('#about').removeClass('hidden-section').addClass('active-section');
-    }
+    let buttonId = this.id; // i.e. about-button
+    let buttonTag = buttonId.split("-")[0]; // i.e. about
+    $(`#${buttonTag}`).removeClass('hidden-section').addClass('active-section');
+    // if (buttonId == "workshopsButton") {
+    //   $('#workshops').removeClass('hidden-section').addClass('active-section');
+    // }
+    // if (buttonId == 'aboutButton') {
+    //   $('#about').removeClass('hidden-section').addClass('active-section');
+    // }
+    // if (buttonId == 'discussionButton') {
+    //   $('#discussions').removeClass('hidden-section').addClass('active-section');
+    // }
   })
 });
