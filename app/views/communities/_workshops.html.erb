@@ -1,16 +1,18 @@
 <div id="workshops" class="hidden-section">
-  <div class="block_whtbg_shadow">
-    <div class="w-row">
-      <div class="w-col w-col-3">
-        <div class="workshop-date">
-          <div class="date-text">August 16, 2018</div>
+  <% workshops.each do |workshop| %>
+    <div class="block_whtbg_shadow">
+      <div class="w-row">
+        <div class="w-col w-col-3">
+          <div class="workshop-date">
+            <div class="date-text"><%= workshop.date %></div>
+          </div>
         </div>
+        <div class="w-col w-col-6">
+          <h4 class="heading_workshop"><%= workshop.title %></h4>
+          <h5 class="heading-6"><%= workshop.location %></h5>
+        </div>
+        <div class="w-col w-col-3"><%= link_to "REGISTER", workshop.link, class:"button_green full_width w-button", target: :_blank %></div>
       </div>
-      <div class="w-col w-col-6">
-        <h4 class="heading_workshop">Intro to Teaching Using Raspberry Pi</h4>
-        <h5 class="heading-6">Berkeley, CA</h5>
-      </div>
-      <div class="w-col w-col-3"><a href="#" class="button_green full_width w-button">REGISTER</a></div>
     </div>
-  </div>
+  <% end %>
 </div>
