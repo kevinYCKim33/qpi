@@ -1,9 +1,10 @@
   <div class="section">
     <div class="container_80px w-container">
       <h2 class="section-heading">LOG INTO YOUR ACCOUT</h2>
-      <% if flash[:message] %>
-        <div class="text_sky-blue">Check your email for a link to reset your password. If it doesn&#x27;t appear within a few minutes, check your spam folder.</div>
-      <% end %>
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}", class:"text_sky-blue" if msg.is_a?(String) %>
+      <%- end -%>
+      <div class="text_sky-blue"><%= devise_error_messages! %></div>
       <div class="form-block w-form">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
@@ -15,6 +16,6 @@
           <%= f.submit "LOG IN", class:'button_blue _75width center w-button' %>
         <% end %>
       </div>
-      <div class="text_agreement center">Already have an account? <a target="_blank" href="/register">Sign Up</a>.</div>
+      <div class="text_agreement center">Already have an account? <a href="/sign-up">Sign Up</a.</div>
     </div>
   </div>

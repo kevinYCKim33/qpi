@@ -3,7 +3,7 @@
     <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
     <div class="form-block w-form">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: "email-form"}) do |f| %>
-        <%= devise_error_messages! %>
+        <ul style="color:red; list-style-type:none"><%= devise_error_messages! %></ul>
 
         <%= f.text_field :name, autofocus: true, required: true, class: "text-field center w-input", maxlength: 256, placeholder: 'Full Name' %>
 
@@ -22,18 +22,3 @@
     </div>
   </div>
 </div>
-
-<!-- <div class="section">
-  <div class="container_80px w-container">
-    <h2 class="section-heading">SIGN UP TO GET FREE ACCESS TO OUR COMMUNITIES</h2>
-    <div class="form-block w-form">
-      <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/profile" redirect="/profile" class="sign-up">
-        <input type="text" class="text-field center w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Full Name" id="Full-Name" required="">
-        <input type="email" class="text-field center w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" id="Email-2" required="">
-        <input type="password" class="text-field center w-input" maxlength="256" name="Password" data-name="Password" placeholder="Password" id="Password" required="">
-        <div class="checkbox_subscribe width_75 w-checkbox"><input type="checkbox" id="Subscribe" name="Subscribe" data-name="Subscribe" checked="" class="checkbox w-checkbox-input"><label for="Subscribe" class="checkbox-label w-form-label">Subscribe to QPi&#x27;s newsletter to be first notified about upcoming workshops.</label></div>
-        <div class="text_agreement">By clicking on Sign Up, you agree to QPi Education&#x27;s <a href="#" class="link-2">Terms and Condition of Use</a> and <a href="#" class="link-2">Privacy Policy</a>.<a href="#"></a></div><input type="submit" value="SIGN UP" data-wait="Please wait..." class="button_blue _75width center w-button"></form>
-    </div>
-    <div class="text_agreement center">Already have an account? <a target="_blank" href="/login" class="link_signup">Log In</a>.</div>
-  </div>
-</div> -->
