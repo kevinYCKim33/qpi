@@ -9,7 +9,7 @@ class CommunityUsersController < ApplicationController
   def destroy
     community_user = CommunityUser.find(params[:id])
     community_user.destroy
-    redirect_to communities_path
+    redirect_to my_communities_path
   end
 
 end
