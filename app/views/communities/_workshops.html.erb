@@ -1,5 +1,5 @@
 <div id="workshops" class="hidden-section">
-  <% workshops.each do |workshop| %>
+  <% workshops.order(:start_date).each do |workshop| %>
     <div class="block_whtbg_shadow">
       <div class="w-row">
         <div class="w-col w-col-3">

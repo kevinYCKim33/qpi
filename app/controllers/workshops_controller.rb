@@ -1,7 +1,7 @@
 class WorkshopsController < ApplicationController
   def index
     @title = "Workshops"
-    @workshops = Workshop.all
+    @workshops = Workshop.all.order(:start_date)
   end
 
   private
