@@ -17,5 +17,5 @@
     <a href="#" class="social-icon-link w-inline-block"></a>
     <a href="#" class="social-icon-link w-inline-block"></a>
   </div>
-    <a href="workshops-loggedin.html" class="button_leftnav w-button">Attend a Workshop</a>
+    <%= link_to 'Attend a Workshop', workshops_path, class: "button_leftnav w-button #{active?(workshops_path)}" %>
 </div>

@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <div class="content-wrapper">
+    <h1 class="main_heading_whitebg">WORKSHOPS</h1>
+    <%= render partial: 'workshop', collection: @workshops, as: :workshop %>
+  </div>
+<% else %>
+  <div class="section">
+    <div class="container_80px w-container">
+      <div class="section-heading centered">UPCOMING WORKSHOPS</div>
+      <%= render partial: 'workshop', collection: @workshops, as: :workshop %>
+    </div>
+  </div>
+<% end %>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :likes
   resources :comments
   resources :discussions
-  # resources :workshops
+  resources :workshops, only: [:index]
 
   get 'explore-communities', to: 'communities#index', as: 'communities'
   get 'my-communities', to: 'communities#my_communities', as: 'my_communities'
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'landing#home'
-  get '/workshops', to: 'landing#workshops', as: 'guest_workshops'
+  # get '/workshops', to: 'landing#workshops', as: 'guest_workshops'
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
 

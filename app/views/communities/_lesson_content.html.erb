@@ -1,0 +1,16 @@
+<div class="block_whtbg_shadow">
+  <h2 class="content-heading">Lesson Content</h2>
+  <% lessons.each_slice(3) do |trio| %>
+    <div class="row_lesson w-row">
+      <% trio.each do |lesson| %>
+        <div class="w-col w-col-4">
+          <div class="block_lesson">
+            <a href="<%= lesson.link %>" target="_blank" class="link-block_lesson w-inline-block">
+              <h4 class="heading_lesson"><%= lesson.title %></h4>
+            </a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

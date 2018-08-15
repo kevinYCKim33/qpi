@@ -4,11 +4,16 @@
       <%= link_to root_path do %>
         <img src="<%=asset_path('Logo_CircleOnly.svg')%>"  width="46" class="brand-link">
       <% end %>
-      <a href="workshops.html" class="navigation-link w-nav-link">Workshops</a>
-      <a href="about.html" class="navigation-link w-nav-link">About</a>
-      <a href="contact.html" class="navigation-link w-nav-link">Contact</a>
-      <a href="sign-up.html" data-w-id="ed16c1a2-edb7-388b-00c7-903bd1f25af4" class="button_blue w-button">SIGN UP FREE</a>
-      <a href="login.html" class="button_hollow_blue w-button">Log IN</a>
+      <!-- <a href="workshops.html" class="navigation-link w-nav-link">Workshops</a> -->
+      <%= link_to 'Workshops', workshops_path, class: "navigation-link w-nav-link" %>
+      <!-- <a href="about.html" class="navigation-link w-nav-link">About</a> -->
+      <%= link_to 'About', about_path, class: "navigation-link w-nav-link" %>
+      <!-- <a href="contact.html" class="navigation-link w-nav-link">Contact</a> -->
+      <%= link_to 'Contact', contact_path, class: "navigation-link w-nav-link" %>
+      <!-- <a href="sign-up.html" data-w-id="ed16c1a2-edb7-388b-00c7-903bd1f25af4" class="button_blue w-button">SIGN UP FREE</a> -->
+      <%= link_to 'SIGN UP FREE', new_user_registration_path, class: "button_blue w-button"  %>
+      <!-- <a href="login.html" class="button_hollow_blue w-button">Log IN</a> -->
+      <%= link_to 'LOG IN', new_user_session_path, class: "button_hollow_blue w-button" %>
     </nav>
     <div class="hamburger-button w-nav-button">
       <div class="w-icon-nav-menu"></div>

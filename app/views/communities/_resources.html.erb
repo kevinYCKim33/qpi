@@ -1,69 +1,7 @@
 <div id="resources" class="hidden-section">
-  <div class="block_whtbg_shadow">
-    <h2 class="content-heading">Lesson Content</h2>
-    <div class="row_lesson w-row">
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a href="https://drive.google.com/open?id=1QOtxWPgS1OiFKd05BZp1WQFDpUo7kBDJ" target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 1</h4>
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a href="https://drive.google.com/open?id=16Uxjb2yV4nwP2CHvIOrjK_t3q7mWn4A9" target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 2</h4>
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a href="https://drive.google.com/open?id=1OOsbtFRQLV3VZQn6TFN6ZJQS6xVYtCwT" target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 3</h4>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="row_lesson w-row">
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a href="https://drive.google.com/open?id=1xVS__guV_NJn72fbdwYIOW2q7SSeRq1C" target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 4</h4>
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-4"></div>
-      <div class="w-col w-col-4"></div>
-    </div>
-  </div>
-  <div class="block_whtbg_shadow">
-    <h2 class="content-heading">Assessments</h2>
-    <div class="row_lesson w-row">
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 1</h4>
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 2</h4>
-          </a>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="block_lesson">
-          <a target="_blank" class="link-block_lesson w-inline-block">
-            <h4 class="heading_lesson">Module 3</h4>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="block_whtbg_shadow">
-    <h2 class="content-heading">References</h2>
-    <div><a href="#">Text Link</a></div>
-  </div>
+  <%= render 'lesson_content', lessons: community.lessons %>
+
+  <%= render 'assessments', assessments: community.assessments %>
+
+  <%= render 'references', references: community.references %>
 </div>
