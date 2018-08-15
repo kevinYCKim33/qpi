@@ -13,7 +13,7 @@
 
   <% if user.twitter != '' && user.twitter != nil %>
     <a href="<%=append_https_if_necessary(user.twitter)%>" class="social-icon-link-2 w-inline-block" target="_blank">
-      <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742372f43c5a631_social-18.svg" width="25">
+      <img src="<%=asset_path('social-18.svg')%>" width="25">
     </a>
   <% end %>
 
@@ -24,7 +24,7 @@
   <% end %>
 
     <a href="mailTo:<%=user.email%>" class="social-icon-link-2 w-inline-block">
-      <img src="https://uploads-ssl.webflow.com/5b62493c7742377be1c5a5e1/5b62493d7742379ca2c5a616_social-30.svg" width="25">
+      <img src="<%=asset_path('social-30.svg')%>" width="25">
     </a>
 
 </div>
