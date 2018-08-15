@@ -1,21 +1,18 @@
-ActiveAdmin.register Workshop do
+ActiveAdmin.register Community do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :community_id, :title, :location, :link, :date, :description, :start_date
+permit_params :title, :summary, :prereqs
 
-index do
-  column :id
-  column :title
-  column :location
-  column :link
-  column :date
-  column :start_date
-  column :description
-  column :created_at
-  column :updated_at
-  actions
-end
+  index do
+    column :id
+    column :title
+    column :summary
+    column :prereqs
+    column :created_at
+    column :updated_at
+    actions
+  end
 #
 # or
 #
