@@ -7,6 +7,7 @@ end
 
 gem 'react-rails'
 
+gem 'activeadmin', github: 'activeadmin'
 gem 'gibbon'
 gem 'dotenv-rails'
 gem 'devise'
