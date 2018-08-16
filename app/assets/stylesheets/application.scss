@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ *= require normalize
+ *= require webflow
+ *= require qpi
+ *= require communities
+ *= require_self
+ */
+
+a.thredded--messageboard {
+  background-color: white;
+  &:hover {
+    background-color: rgb(249, 250, 252);
+  }
+}
+
+// .thredded--messageboard--title {
+//   h2 {
+//     font-size: 15px;
+//   }
+//   font-size: 30px;
+//   color: blue;
+// }
+
+
+
+
+
+@import "thredded";
+
+.thredded--main-container {
+  // The padding and max-width are handled by the app's container.
+  max-width: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  @include thredded-media-tablet-and-up {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.thredded--topic-read > .thredded--topics--posts-count {
+  background: #374a8c;
+}
+
+div.thredded--messageboards-group > a > header > h2 {
+  font-size: 20px;
+  color: black;
+}
+
+div.thredded--messageboards-group > a > header > div > h3 {
+  letter-spacing: 0px;
+  font-size: 15px;
+}
+
+
+ // <a class="thredded--messageboard" href="/discussions/intro-to-teaching-using-raspberry-pi">
+ //   <header class="thredded--messageboard--header">
+ //     <h2 class="thredded--messageboard--title">Intro to Teaching Using Raspberry Pi</h2>
+ //     <div class="thredded--messageboard--meta">
+ //     <h3 class="thredded--messageboard--meta--counts"> 2 topics / 4 posts</h3>
+ //   </header>
+ //
+ //   <p class="thredded--messageboard--description">Discuss the curriculum and share your thoughts here.</p>
+ //   <p class="thredded--messageboard--byline"> Updated <time datetime="2018-08-16T09:01:40Z" data-time-ago="true" title="Thu, 16 Aug 2018 09:01:40 +0000" data-tid="91">2 hours ago</time> <cite>by George Costanza</cite></p>
+ // </a>

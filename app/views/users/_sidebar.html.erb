@@ -1,9 +1,11 @@
 <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
   <nav role="navigation" class="nav-menu-2 w-nav-menu">
-    <%= link_to("MY <br /> COMMUNITIES".html_safe, my_communities_path, class: "nav-link w-nav-link #{active?(my_communities_path)}") %>
-    <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, communities_path, class: "nav-link w-nav-link #{active?(communities_path)}") %>
-    <%= link_to("PROFILE", user_path(current_user), class: "nav-link w-nav-link #{active?(user_path(current_user))}") %>
-    <%= link_to("LOG OUT", destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
+    <%= link_to("MY <br /> COMMUNITIES".html_safe, main_app.my_communities_path, class: "nav-link w-nav-link #{active?(main_app.my_communities_path)}") %>
+    <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, main_app.communities_path, class: "nav-link w-nav-link #{active?(main_app.communities_path)}") %>
+    <%= link_to("DISCUSSIONS", '/discussions', class: "nav-link w-nav-link #{discussions?}") %>
+    <%= link_to("PROFILE", main_app.user_path(current_user), class: "nav-link w-nav-link #{active?(main_app.user_path(current_user))}") %>
+
+    <%= link_to("LOG OUT", main_app.destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>
   </nav>
   <div class="hamburger-button-2 w-nav-button">
     <div class="w-icon-nav-menu"></div>
@@ -17,5 +19,5 @@
     <a href="#" class="social-icon-link w-inline-block"></a>
     <a href="#" class="social-icon-link w-inline-block"></a>
   </div>
-    <%= link_to 'Attend a Workshop', workshops_path, class: "button_leftnav w-button #{active?(workshops_path)}" %>
+    <%= link_to 'Attend a Workshop', main_app.workshops_path, class: "button_leftnav w-button #{active?(main_app.workshops_path)}" %>
 </div>
