@@ -5,8 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'react-rails'
-
+gem 'thredded', '~> 0.15.4'
 gem 'activeadmin', github: 'activeadmin'
 gem 'gibbon'
 gem 'dotenv-rails'

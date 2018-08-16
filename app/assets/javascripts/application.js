@@ -13,6 +13,3 @@
 //= require rails-ujs
 //= require turbolinks
 //= require cable
-//= require react
-//= require react_ujs
-//= require components
