@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :workshops
-  has_many :comments
   has_many :community_users
   has_many :communities, :through => :community_users
   # Include default devise modules. Others available are:
@@ -9,7 +8,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, presence: true
-  validates :email, presence: true 
+  validates :email, presence: true
 
 
   after_create :subscribe_user_to_mailing_list
