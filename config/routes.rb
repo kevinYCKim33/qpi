@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   resources :references
   resources :assessments
   resources :lessons
-  resources :likes
-  resources :comments
   resources :workshops, only: [:index]
 
   get 'explore-communities', to: 'communities#index', as: 'communities'
