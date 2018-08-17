@@ -3,9 +3,9 @@ module ApplicationHelper
     'w--current' if current_page?(path)
   end
 
-  def discussions?
+  def discussions?(path)
     # binding.pry
-    return 'w--current' if current_page?('/discussions/intro-to-teaching-using-raspberry-pi')
+    return 'w--current' if current_page?(path)
   end
 
   def append_https_if_necessary(user_input_link)

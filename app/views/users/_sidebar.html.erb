@@ -2,7 +2,7 @@
   <nav role="navigation" class="nav-menu-2 w-nav-menu">
     <%= link_to("MY <br /> COMMUNITIES".html_safe, main_app.my_communities_path, class: "nav-link w-nav-link #{active?(main_app.my_communities_path)}") %>
     <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, main_app.communities_path, class: "nav-link w-nav-link #{active?(main_app.communities_path)}") %>
-    <%= link_to("DISCUSSIONS", '/discussions', class: "nav-link w-nav-link #{discussions?}") %>
+    <%= link_to("DISCUSSIONS", '/discussions/', class: "nav-link w-nav-link #{active?('/discussions/')}") %>
     <%= link_to("PROFILE", main_app.user_path(current_user), class: "nav-link w-nav-link #{active?(main_app.user_path(current_user))}") %>
 
     <%= link_to("LOG OUT", main_app.destroy_user_session_path, :method => 'delete', class:"nav-link w-nav-link") %>

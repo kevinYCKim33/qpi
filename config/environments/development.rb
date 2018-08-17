@@ -54,6 +54,12 @@ Rails.application.configure do
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.perform_deliveries = true
 
+# how to get action mailer to work with gmail
+# basically, make a throwaway gmail account to send emails
+# turn on allow less secure app option
+
+  # https://launchschool.com/blog/handling-emails-in-rails
+  # https://myaccount.google.com/lesssecureapps
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
