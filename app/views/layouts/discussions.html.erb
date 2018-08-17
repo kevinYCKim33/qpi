@@ -1,3 +1,10 @@
+<% if current_user == nil  %>
+  <% flash[:message] = "Please login to access our discussions" %>
+  <script type="text/javascript">
+    window.location.href="/login"
+  </script>
+<% else %>
+
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Fri Aug 10 2018 08:27:08 GMT+0000 (UTC)  -->
@@ -17,6 +24,9 @@
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
 <body>
+
+
+
   <%= render 'users/sidebar' %>
   <div class="content-wrapper">
     <%= yield %>
@@ -28,3 +38,5 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
+
+<% end %>
