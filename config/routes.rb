@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   mount Thredded::Engine => '/discussions'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :references
-  resources :assessments
-  resources :lessons
+
   resources :workshops, only: [:index]
 
   get 'explore-communities', to: 'communities#index', as: 'communities'
@@ -18,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   root 'landing#home'
+
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
 

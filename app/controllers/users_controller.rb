@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
-
-  def home
-    # binding.pry
-    # @title = 'Home'
-    redirect_to root_path if !user_signed_in?
-  end
+  before_action :require_login
 
   def show
     @user = User.find(params[:id])
@@ -33,5 +28,9 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :occupation, :school, :grade, :location, :facebook, :pinterest, :twitter, :google)
   end
 
+  def require_login
+    flash[:message] = 'You must login to access member profiles'
+    redirect_to new_user_session_path if !user_signed_in?
+  end
 
 end

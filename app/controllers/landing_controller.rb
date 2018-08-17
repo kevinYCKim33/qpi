@@ -1,8 +1,8 @@
 class LandingController < ApplicationController
+  before_action :redirect_if_logged_in
 
   def home
     @title = 'QPi Education | STEM Professional Development'
-    redirect_to my_communities_path if user_signed_in?
   end
 
   def about
@@ -13,8 +13,10 @@ class LandingController < ApplicationController
     @title = 'Contact'
   end
 
-  def workshops
-    @title = 'Workshops'
+  private
+
+  def redirect_if_logged_in
+    redirect_to my_communities_path if user_signed_in?
   end
 
 end

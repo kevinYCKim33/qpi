@@ -1,4 +1,5 @@
 class CommunitiesController < ApplicationController
+  before_action :require_login
 
   # 'explore-communities'
   def index
@@ -21,5 +22,12 @@ class CommunitiesController < ApplicationController
       flash[:message] = "You have not joined that community yet!"
       redirect_to communities_path
     end
+  end
+
+  private
+
+  def require_login
+    flash[:message] = 'You must login to access community features'
+    redirect_to new_user_session_path if !user_signed_in?
   end
 end
