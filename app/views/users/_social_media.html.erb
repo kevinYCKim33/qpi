@@ -1,30 +1,26 @@
 <div class="block_socialmedia">
   <% if user.facebook != '' && user.facebook != nil %>
-    <a href="<%=append_https_if_necessary(user.facebook)%>" class="social-icon-link-2 w-inline-block" target="_blank">
-      <img src="<%=asset_path('social-02.svg')%>" width="25">
+    <a href="<%=append_https_if_necessary(user.facebook)%>" class="social-button w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-02-white.svg')%>" width="25">
     </a>
   <% end %>
 
   <% if user.pinterest != '' && user.pinterest != nil %>
-    <a href="<%=append_https_if_necessary(user.pinterest)%>" class="social-icon-link-2 w-inline-block" target="_blank">
-      <img src="<%=asset_path('social-11.svg')%>" width="25">
+    <a href="<%=append_https_if_necessary(user.pinterest)%>" class="social-button w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-20-white.svg')%>" width="25">
     </a>
   <% end %>
 
   <% if user.twitter != '' && user.twitter != nil %>
-    <a href="<%=append_https_if_necessary(user.twitter)%>" class="social-icon-link-2 w-inline-block" target="_blank">
-      <img src="<%=asset_path('social-18.svg')%>" width="25">
+    <a href="<%=append_https_if_necessary(user.twitter)%>" class="social-button w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-18-white.svg')%>" width="25">
     </a>
   <% end %>
 
   <% if user.google != '' && user.google != nil %>
-    <a href="<%=append_https_if_necessary(user.google)%>" class="social-icon-link-2 w-inline-block" target="_blank">
-      <img src="<%=asset_path('social-06.svg')%>" width="25">
+    <a href="<%=append_https_if_necessary(user.google)%>" class="social-button w-inline-block" target="_blank">
+      <img src="<%=asset_path('social-06-white.svg')%>" width="25">
     </a>
   <% end %>
-
-    <a href="mailTo:<%=user.email%>" class="social-icon-link-2 w-inline-block">
-      <img src="<%=asset_path('social-30.svg')%>" width="25">
-    </a>
 
 </div>
