@@ -1,9 +1,6 @@
   <div class="content-wrapper">
     <h1 class="main_heading_whitebg">COMMUNITIES</h1>
     <div class="block_whtbg_shadow">
-      <% if flash[:message] %>
-        <p style="color:red;"> <%= flash[:message] %> </p>
-      <% end %>
       <p>Join a community of educators bound to a common idea. In each community, you can share your ideas and successes with each other. Also, you can ask questions, answer other people’s questions, and look up what others have done in the past. These virtual communities encourage collaboration and connection with teachers across the world about a variety of STEM topics.  Make sure to come back to see New Communities that we will be creating!</p>
     </div>
     <div class="community_wrapper">
@@ -12,7 +9,7 @@
         <%= render partial: 'community', collection: @communities, as: :community %>
 
         <div class="w-col w-col-6">
-          <div><img src="<%= asset_path('image_alamedafairekid2.jpg')%>" srcset="<%= asset_path('image_alamedafairekid2-p-500.jpeg')%> 500w, <%= asset_path('image_alamedafairekid2-p-800.jpeg')%> 800w, <%= asset_path('image_alamedafairekid2.jpg')%> 952w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
+          <div><img style="width: 100%;" src="<%= asset_path('image_alamedafairekid2.jpg')%>" srcset="<%= asset_path('image_alamedafairekid2-p-500.jpeg')%> 500w, <%= asset_path('image_alamedafairekid2-p-800.jpeg')%> 800w, <%= asset_path('image_alamedafairekid2.jpg')%> 952w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 45vw, 34vw" class="image_community">
             <h3 class="header_community">NEW COMMUNITY<br>COMING SOON</h3>
           </div>
         </div>
