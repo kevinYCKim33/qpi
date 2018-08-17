@@ -1,5 +1,5 @@
 <% if user == current_user %>
   <div><%= link_to("Edit Profile", edit_user_path(user), class: "button_hollow_blue centered w-button") %></div>
 <% else %>
-  <div><a href="mailTo:<%=user.email%>" class="button_hollow_blue centered w-button">Send Email </a></div>
+  <div><a href="mailTo:<%=user.email%>" class="button_hollow_blue centered w-button", style="background-color: #5761c6;color: white;">Send Email </a></div>
 <% end %>

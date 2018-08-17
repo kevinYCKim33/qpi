@@ -10,7 +10,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
 
-
   after_create :subscribe_user_to_mailing_list
 
   def member?(community)
@@ -20,7 +19,6 @@ class User < ApplicationRecord
   # def join_community(community)
   #   self.communities << community
   # end
-
 
   private
 

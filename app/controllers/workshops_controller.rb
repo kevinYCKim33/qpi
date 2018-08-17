@@ -4,10 +4,6 @@ class WorkshopsController < ApplicationController
     @workshops = Workshop.all.order(:start_date)
   end
 
-  private
+  # workshops get created via ActiveAdmin
 
-  # def workshop_params
-  #   # binding.pry
-  #   params.require(:workshop).permit(:title, :location, :link, :date, :description, :community_id)
-  # end
 end

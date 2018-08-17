@@ -1,10 +1,10 @@
 module ApplicationHelper
+  #navbar highlighting
   def active?(path)
     'w--current' if current_page?(path)
   end
 
   def discussions?(path)
-    # binding.pry
     return 'w--current' if current_page?(path)
   end
 
