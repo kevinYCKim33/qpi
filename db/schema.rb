@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180816122607) do
+ActiveRecord::Schema.define(version: 20180818114853) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -344,6 +344,7 @@ ActiveRecord::Schema.define(version: 20180816122607) do
     t.string "pinterest"
     t.string "twitter"
     t.string "google"
+    t.string "avatar_url", default: "https://s3-us-west-1.amazonaws.com/qpibeta/Profile-Default.svg"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "name_nocase", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

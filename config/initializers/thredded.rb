@@ -30,7 +30,8 @@ Thredded.user_path = ->(user) {
 Thredded.current_user_method = :"current_#{Thredded.user_class_name.demodulize.underscore}"
 
 # User avatar URL. rb-gravatar gem is used by default:
-Thredded.avatar_url = ->(user) { Gravatar.src(user.email, 156, 'mm') }
+# Thredded.avatar_url = ->(user) { Gravatar.src(user.email, 156, 'mm') }
+Thredded.avatar_url = -> (user) {user.avatar_url}
 
 # ==> Permissions Configuration
 # By default, thredded uses a simple permission model, where all the users can post to all message boards,
@@ -59,7 +60,7 @@ Thredded.messageboards_order = :position
 Thredded.show_topic_followers = false
 
 # Whether the list of users who are currently online is displayed.
-Thredded.currently_online_enabled = true
+Thredded.currently_online_enabled = false # changed from true 8.18.2018
 
 # Whether private messaging functionality is enabled.
 Thredded.private_messaging_enabled = true
