@@ -10,7 +10,7 @@
       <% communities.each do |community| %>
         <div class="w-col w-col-6">
           <%= link_to community_path(community), class: "link-block w-inline-block" do %>
-            <img src="<%=asset_path('KidandCar.png')%>" srcset="<%=asset_path('KidandCar-p-500.png')%> 500w, <%=asset_path('KidandCar-p-800.png')%> 800w, <%=asset_path('KidandCar-p-1080.png')%> 1080w, <%=asset_path('KidandCar.png')%> 1088w" sizes="100vw" class="image_community">
+            <img src="<%=aws_directory('KidandCar.png')%>" srcset="<%=aws_directory('KidandCar-p-500.png')%> 500w, <%=aws_directory('KidandCar-p-800.png')%> 800w, <%=aws_directory('KidandCar-p-1080.png')%> 1080w, <%=aws_directory('KidandCar.png')%> 1088w" sizes="100vw" class="image_community">
             <h3 class="header_community"><%= community.title %></h3>
           <% end %>
         </div>
