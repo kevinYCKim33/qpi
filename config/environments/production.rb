@@ -21,7 +21,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  
+
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
@@ -89,4 +89,22 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # how to get action mailer to work with gmail
+  # basically, make a throwaway gmail account to send emails
+  # turn on allow less secure app option
+
+    # https://launchschool.com/blog/handling-emails-in-rails
+    # https://myaccount.google.com/lesssecureapps
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "example.com",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: ENV["GMAIL_USERNAME"],
+      password:ENV["GMAIL_PASSWORD"]
+    }
+
+    config.action_mailer.default_url_options = { :host => 'qpibeta.herokuapp.com' }
 end
