@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_attached_file :profile_pic, styles: {
     discussion: '52x52#',
-    main: '184x184#',
+    main: '300x300#',
   }
 
   validates_with AttachmentSizeValidator, attributes: :profile_pic, less_than: 5.megabytes

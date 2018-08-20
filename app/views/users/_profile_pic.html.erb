@@ -1,5 +1,5 @@
 <% if user.profile_pic_file_name %>
-  <img src="https:<%=user.profile_pic.url(:main)%>" class="image_member" style="border-radius: 50%">
+  <img src="https:<%=user.profile_pic.url(:main)%>" width="184" class="image_member" style="border-radius: 50%">
 <% else %>
   <img src="<%=aws_directory('Logo_CircleOnly.svg')%>" width="184" class="image_member">
 <% end %>
