@@ -4,7 +4,8 @@
     <div class="block_top50px">
       <div class="w-row">
         <div class="w-col w-col-4">
-          <img src="<%=aws_directory('Profile-Default.svg')%>" width="184" class="image_member">
+          <%# binding.pry %>
+          <%= render '/users/profile_pic', user: @user %>
           <%= render '/users/social_media', user: @user %>
         </div>
         <div class="w-col w-col-8">

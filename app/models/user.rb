@@ -1,4 +1,13 @@
 class User < ApplicationRecord
+  has_attached_file :profile_pic, styles: {
+    discussion: '52x52#',
+    main: '184x184#',
+  }
+
+  validates_with AttachmentSizeValidator, attributes: :profile_pic, less_than: 5.megabytes
+  #jpeg, png gif will work
+  validates_attachment_content_type :profile_pic, :content_type => /\Aimage\/.*\Z/
+
   has_many :workshops
   has_many :community_users
   has_many :communities, :through => :community_users

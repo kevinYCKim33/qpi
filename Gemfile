@@ -7,6 +7,13 @@ end
 
 ruby '2.3.1'
 
+# https://www.youtube.com/watch?v=opiDMh25wQM
+  gem 'paperclip'
+  # gem 'aws-sdk', '< 2.0' #lots of stack overflow
+  # gem 'aws-sdk', '~> 2.3'
+  gem 'aws-sdk-s3'
+
+
 gem 'rails_12factor', group: :production
 gem 'thredded', '~> 0.15.4'
 gem 'activeadmin', github: 'activeadmin'

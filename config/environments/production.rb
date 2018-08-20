@@ -110,5 +110,19 @@ Rails.application.configure do
       password:ENV["GMAIL_PASSWORD"]
     }
 
-    config.action_mailer.default_url_options = { :host => 'qpibeta.herokuapp.com' }
+    config.action_mailer.default_url_options = { :host => 'https://qpibeta.herokuapp.com' }
+
+    # https://www.youtube.com/watch?v=opiDMh25wQM
+    # 5:45 in
+    config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials:  {
+      bucket:  ENV['S3_BUCKET_NAME'],
+      access_key_id:  ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
+      s3_region: ENV['AWS_REGION']
+      }
+    }
+
+    config.force_ssl = true #hope this works to force https 
 end

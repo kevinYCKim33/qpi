@@ -2,12 +2,15 @@
   <h1 class="name_heading">Edit Profile</h1>
   <div class="w-clearfix">
     <div class="w-form">
-      <%= form_with model: @user do |f| %>
+      <%= form_with model: @user, multipart: true do |f| %>
         <%= f.label :name, 'Name:', class: "profile_label" %>
         <%= f.text_field :name, autofocus: true, required: true, class: "text-field-2 w-input"   %>
 
         <%= f.label :email, 'Email Address:', class: "profile_label" %>
         <%= f.email_field :email, required: true, class: "text-field-2 w-input" %>
+
+        <%= f.label :profile_pic %>
+        <%= f.file_field :profile_pic %>
 
         <%= f.label :location, 'Location:', class: "profile_label" %>
         <%= f.text_field :location, class: "text-field-2 w-input", placeholder: 'Berkeley, CA' %>
