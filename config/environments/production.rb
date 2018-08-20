@@ -124,5 +124,5 @@ Rails.application.configure do
       }
     }
 
-    config.force_ssl = true #hope this works to force https 
+    config.force_ssl = true #hope this works to force https on heroku, and it does
 end

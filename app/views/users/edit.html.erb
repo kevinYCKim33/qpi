@@ -1,16 +1,26 @@
 <div class="content-wrapper">
   <h1 class="name_heading">Edit Profile</h1>
+
+
+
   <div class="w-clearfix">
     <div class="w-form">
       <%= form_with model: @user, multipart: true do |f| %>
+      <%# binding.pry %>
+      <% if @user.errors.any? %>
+        <%= @user.errors.full_messages.each do |msg| %>
+          <%#binding.pry %>
+            <p style="color: red"> <%= msg %> </p>
+        <% end %>
+      <% end %>
         <%= f.label :name, 'Name:', class: "profile_label" %>
         <%= f.text_field :name, autofocus: true, required: true, class: "text-field-2 w-input"   %>
 
         <%= f.label :email, 'Email Address:', class: "profile_label" %>
         <%= f.email_field :email, required: true, class: "text-field-2 w-input" %>
 
-        <%= f.label :profile_pic %>
-        <%= f.file_field :profile_pic %>
+        <%= f.label :profile_pic, 'Profile Picture:',  class: "profile_label"  %>
+        <%= f.file_field :profile_pic, accept: 'image/png,image/gif,image/jpeg', class: "text-field-2 w-input"%>
 
         <%= f.label :location, 'Location:', class: "profile_label" %>
         <%= f.text_field :location, class: "text-field-2 w-input", placeholder: 'Berkeley, CA' %>
@@ -36,7 +46,7 @@
         <%= f.label :google, 'Google+:', class: "profile_label" %>
         <%= f.text_field :google, class: "text-field-2 w-input", placeholder: 'Google+ Link' %>
 
-        <%= f.submit "Save", class: "button_blue full-width w-button" %>
+        <%= f.submit "Save", class: "button_blue full-width w-button", data: { disable_with: 'Please wait....' }  %>
       <% end %>
     </div>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180820135418) do
+ActiveRecord::Schema.define(version: 20180820170425) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -344,10 +344,9 @@ ActiveRecord::Schema.define(version: 20180820135418) do
     t.string "pinterest"
     t.string "twitter"
     t.string "google"
-    t.string "avatar_url", default: "https://s3-us-west-1.amazonaws.com/qpibeta/Profile-Default.svg"
     t.string "profile_pic_file_name"
     t.string "profile_pic_content_type"
-    t.bigint "profile_pic_file_size"
+    t.integer "profile_pic_file_size", limit: 8
     t.datetime "profile_pic_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "name_nocase", unique: true

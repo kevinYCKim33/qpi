@@ -18,7 +18,16 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     @user.update(user_params)
-    redirect_to user_path(current_user)
+    # binding.pry
+    if (@user.errors.any?)
+      # binding.pry
+      # @user.errors.full_messages
+      flash[:error] = @user.errors.full_messages.join(", ")
+      # redirect_to user_path(current_user)
+    else
+      flash[:message] = "Profile successfully updated!"
+    end
+      redirect_to user_path(current_user)
   end
 
 
@@ -29,8 +38,10 @@ class UsersController < ApplicationController
   end
 
   def require_login
-    flash[:message] = 'You must login to access member profiles'
-    redirect_to new_user_session_path if !user_signed_in?
+    if !user_signed_in?
+      flash[:message] = 'You must login to access member profiles'
+      redirect_to new_user_session_path
+    end
   end
 
 end

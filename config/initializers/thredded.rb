@@ -31,7 +31,14 @@ Thredded.current_user_method = :"current_#{Thredded.user_class_name.demodulize.u
 
 # User avatar URL. rb-gravatar gem is used by default:
 # Thredded.avatar_url = ->(user) { Gravatar.src(user.email, 156, 'mm') }
-Thredded.avatar_url = -> (user) {user.avatar_url}
+Thredded.avatar_url = -> (user) {
+  if user.profile_pic_file_name
+    return user.profile_pic.url(:discussion)
+  else
+    # default pic of qpi logo
+    return 'https://s3-us-west-1.amazonaws.com/qpibeta/Logo_CircleOnly.svg'
+  end
+}
 
 # ==> Permissions Configuration
 # By default, thredded uses a simple permission model, where all the users can post to all message boards,
