@@ -1,6 +1,6 @@
   <div class="section">
     <div class="container_80px w-container">
-      <h2 class="section-heading">LOG INTO YOUR ACCOUT</h2>
+      <h2 class="section-heading">LOG INTO YOUR ACCOUNT</h2>
       <%- flash.each do |name, msg| -%>
         <% if msg != "Signed out successfully." %>
           <%= content_tag :div, msg, :id => "flash_#{name}", class:"text_sky-blue" if msg.is_a?(String) %>
