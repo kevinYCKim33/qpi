@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
+  # get '/trial', to:
 
 
   get 'images/KidandCar.png', to: 'images#KidandCar'
