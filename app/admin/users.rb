@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :admin
+  permit_params :admin, :premium
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -15,17 +15,19 @@ ActiveAdmin.register User do
   form do |f|
     inputs 'User' do
       f.input :admin
+      f.input :premium
     end
     f.semantic_errors
     f.actions
   end
-  
+
   index do
     actions
     column :id
     column :email
     column :name
     column :admin
+    column :premium
     column :subscribed
     column :occupation
     column :grade

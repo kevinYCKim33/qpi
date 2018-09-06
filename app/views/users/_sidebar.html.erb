@@ -1,4 +1,6 @@
 <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
+  <!-- <a href="profile.html" class="nav_profile"><%=current_user.name%></a> -->
+  <%= link_to(current_user.name, main_app.user_path(current_user), class: "nav_profile") %>
   <nav role="navigation" class="nav-menu-2 w-nav-menu">
     <%= link_to("MY <br /> COMMUNITIES".html_safe, main_app.my_communities_path, class: "nav-link w-nav-link #{active?(main_app.my_communities_path)}") %>
     <%= link_to("EXPLORE <br /> COMMUNITIES".html_safe, main_app.communities_path, class: "nav-link w-nav-link #{active?(main_app.communities_path)}") %>

@@ -26,7 +26,14 @@
 <body>
   <%= render 'users/sidebar' %>
   <div class="content-wrapper">
-    <%= yield %>
+    <% if current_user.premium == true %>
+      <%= yield %>
+    <% else %>
+      <div class="w-container">
+        <h2>Community discussions are exclusive to our premium members. Email info@qpieducation.com to become a  premium member!</h2>
+      </div>
+
+    <% end %>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'webflow', 'data-turbolinks-track': 'reload' %> <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
