@@ -609,7 +609,11 @@ a {
 }
 
 .header_community {
+  display: block;
+  max-width: 100%;
   margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -639,7 +643,7 @@ a {
 }
 
 .nav-menu-2 {
-  margin-top: 100px;
+  margin-top: 50px;
   float: none;
 }
 
@@ -817,6 +821,10 @@ a {
 }
 
 .image_community {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  clear: none;
   border-radius: 5px 5px 0px 0px;
   box-shadow: 1px 1px 2px 0 hsla(240, 7%, 58%, .1);
 }
@@ -856,13 +864,14 @@ a {
   padding: 15px 30px;
   border: 2px solid #47cda4;
   border-radius: 4px;
-  background-color: #edeff2;
+  background-color: #fff;
   color: #47cda4;
 }
 
 .button_hollow_green.full_width {
   width: 100%;
   float: none;
+  background-color: hsla(0, 0%, 100%, 0);
   color: #47cda4;
   text-align: center;
   text-decoration: none;
@@ -1225,6 +1234,17 @@ a {
   opacity: 1;
 }
 
+.nav_profile {
+  display: block;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 15px;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
 html.w-mod-js *[data-ix="fade-in-bottom-page-loads"] {
   opacity: 0;
   -webkit-transform: translate(0px, 50px);
@@ -1305,8 +1325,8 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     padding: 15px;
   }
   .header_community {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 22px;
   }
   .left-navigation {
     position: relative;
@@ -1348,6 +1368,10 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     font-size: 16px;
     line-height: 18px;
   }
+  .nav_profile {
+    display: none;
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1365,10 +1389,12 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   }
   .hero-heading {
     margin-bottom: 15px;
+    margin-left: 10px;
     font-size: 24px;
     line-height: 24px;
   }
   .hero-subheading {
+    margin-left: 10px;
     font-size: 18px;
   }
   .section-heading {
@@ -1378,10 +1404,12 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .section-heading.centered {
     font-size: 24px;
     line-height: 24px;
+    letter-spacing: 2px;
   }
   .section-heading.centered.white {
     font-size: 24px;
     line-height: 24px;
+    letter-spacing: 2px;
   }
   .form-field.text-area {
     display: block;
@@ -1397,9 +1425,19 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     font-size: 16px;
     line-height: 18px;
   }
+  .paragraph {
+    line-height: 20px;
+  }
+  .column {
+    margin-top: 10px;
+  }
   .header_community {
     font-size: 16px;
     line-height: 16px;
+  }
+  .main_heading_whitebg {
+    padding-right: 8px;
+    padding-left: 8px;
   }
   .block_socialmedia {
     margin-bottom: 30px;
@@ -1413,6 +1451,10 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     padding: 12px;
     font-size: 14px;
     line-height: 16px;
+  }
+  .nav_profile {
+    padding: 10px;
+    float: none;
   }
 }
 
@@ -1434,7 +1476,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .hero-heading {
     margin-top: 10px;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
   }
   .hero-subheading {
     font-size: 14px;
@@ -1447,6 +1489,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .section-heading.centered.white {
     font-size: 12px;
     line-height: 12px;
+    letter-spacing: 2px;
   }
   .section-heading.centered {
     font-size: 16px;
@@ -1466,7 +1509,12 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     font-size: 14px;
     line-height: 20px;
   }
+  .paragraph {
+    font-size: 12px;
+    line-height: 16px;
+  }
   .column {
+    margin-top: 50px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -1475,6 +1523,9 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   }
   .hamburger-button-2.w--open {
     background-color: transparent;
+  }
+  .navbar_button {
+    font-size: 14px;
   }
   .nav-link-2 {
     position: static;
@@ -1487,18 +1538,29 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     line-height: 18px;
   }
   .main_heading_whitebg {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 12px;
   }
   .content-wrapper {
     padding: 20px;
   }
+  .text_name_member {
+    font-size: 14px;
+    line-height: 16px;
+  }
   .button {
     margin-bottom: 25px;
   }
   .nav_button {
-    padding: 8px;
+    padding: 4px;
     font-size: 12px;
     line-height: 14px;
   }
+  .nav_button.w--current {
+    float: none;
+  }
+  .nav_profile {
+    display: none;
+  }
 }
+
