@@ -36,7 +36,7 @@ Thredded.avatar_url = -> (user) {
     return user.profile_pic.url(:discussion)
   else
     # default pic of qpi logo
-    return 'https://s3-us-west-1.amazonaws.com/qpibeta/Logo_CircleOnly.svg'
+    return 'https://s3-us-west-1.amazonaws.com/qpi-static-images/Logo_CircleOnly.svg'
   end
 }
 
