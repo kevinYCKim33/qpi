@@ -19,8 +19,9 @@ Rails.application.routes.draw do
 
   get '/about', to: 'landing#about', as: 'about'
   get '/contact', to: 'landing#contact', as: 'contact'
-  # get '/trial', to:
 
+  get '/privacy-policy', to: 'landing#privacy_policy', as: 'privacy_policy'
+  get '/terms-conditions', to: 'landing#terms_conditions', as: 'terms_conditions'
 
   get 'images/KidandCar.png', to: 'images#KidandCar'
   # get 'images/Manzanita.jpeg', to:'images#Manzanita'

@@ -13,6 +13,14 @@ class LandingController < ApplicationController
     @title = 'Contact'
   end
 
+  def privacy_policy
+    @title = 'Privacy Policy'
+  end
+
+  def terms_conditions
+    @title = 'Terms and Conditions'
+  end
+
   private
 
   def redirect_if_logged_in
