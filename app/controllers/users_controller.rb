@@ -3,6 +3,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if current_user.premium == false && @user.id != current_user.id
+      flash[:error] = "Only our premium users are allowed to view other members' profiles"
+      redirect_to user_path(current_user)
+    end
     @title = @user.name
   end
 

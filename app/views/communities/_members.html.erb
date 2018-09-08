@@ -1,14 +1,17 @@
 <h2 class="content-heading">Members</h2>
-
-<% members.each_slice(3) do |trio| %>
-  <div class="w-row" style="margin-bottom: 20px">
-    <% trio.each do |member| %>
-      <div class="w-col w-col-4" style="margin-bottom: 20px">
-        <%= link_to user_path(member) do %>
-         <%= render 'users/profile_pic', user: member %>
-        <% end %>
-          <h3 class="text_name_member"><%= member.name %></h3>
-      </div>
-    <% end %>
-  </div>
+<% if current_user.premium %>
+  <% members.each_slice(3) do |trio| %>
+    <div class="w-row" style="margin-bottom: 20px">
+      <% trio.each do |member| %>
+        <div class="w-col w-col-4" style="margin-bottom: 20px">
+          <%= link_to user_path(member) do %>
+           <%= render 'users/profile_pic', user: member %>
+          <% end %>
+            <h3 class="text_name_member"><%= member.name %></h3>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <p class="paragraph">Only our premium members are allowed to view our community members. Email <b>info@qpieducation.com</b> to become a premium member!</p>
 <% end %>

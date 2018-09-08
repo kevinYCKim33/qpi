@@ -9,6 +9,9 @@
         <div class="w-col w-col-4">
           <%# binding.pry %>
           <%= render '/users/profile_pic', user: @user %>
+          <% if @user.premium %>
+            <h4 class="heading_premium text_center">Premium Member</h4>
+          <% end %>
           <%= render '/users/social_media', user: @user %>
         </div>
         <div class="w-col w-col-8">
